@@ -1,15 +1,12 @@
 import React, {Component, Fragment} from 'react';
+import Article from './Article.js';
 
 class ArticleList extends Component {
 
   render() {
     const articleArray = this.props.articles.map((article) => {
       return(
-        <div
-          className="article"
-        >
-        {article.title}
-        </div>
+        <Article article={article} />
       )
     });
     return (
