@@ -6,13 +6,13 @@ class ArticleList extends Component {
   render() {
     const articleArray = this.props.articles.map((article) => {
       return(
-        <Article article={article} />
+        <Article key={article.id} article={article} />
       )
     });
     return (
       <Fragment>
         <h2>Articles</h2>
-        <div class="articlelist">
+        <div className="articlelist">
           {articleArray}
         </div>
       </Fragment>

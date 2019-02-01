@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 
 class Article extends Component {
 
@@ -8,6 +8,22 @@ class Article extends Component {
         <div className="article-title">
           {this.props.article.title}
         </div>
+        <div className="article-author">
+          {this.props.article.author}
+        </div>
+        <div className="article-description">
+          {this.props.article.description}
+        </div>
+        <div className="article-date">
+          {this.props.article.date}
+        </div>
+        <div className="article-image">
+          <img
+            alt={this.props.article.description}
+            src={this.props.article.imagelink}
+          />
+        </div>
+        <hr />
       </div>
     )
   }
