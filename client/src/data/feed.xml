@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="/shared/bsp/xsl/rss/nolsol.xsl"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title><![CDATA[BBC News - Technology]]></title>
+        <description><![CDATA[BBC News - Technology]]></description>
+        <link>https://www.bbc.co.uk/news/</link>
+        <image>
+            <url>https://news.bbcimg.co.uk/nol/shared/img/bbc_news_120x60.gif</url>
+            <title>BBC News - Technology</title>
+            <link>https://www.bbc.co.uk/news/</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Fri, 01 Feb 2019 16:38:09 GMT</lastBuildDate>
+        <copyright><![CDATA[Copyright: (C) British Broadcasting Corporation, see http://news.bbc.co.uk/2/hi/help/rss/4498287.stm for terms and conditions of reuse.]]></copyright>
+        <language><![CDATA[en-gb]]></language>
+        <ttl>15</ttl>
+        <item>
+            <title><![CDATA[The robot tendrils that mimic plants, and other tech news]]></title>
+            <description><![CDATA[BBC Click's LJ Rich looks at some of the best technology stories of the week.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-46988570</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-46988570</guid>
+            <pubDate>Fri, 01 Feb 2019 08:33:11 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/8A54/production/_105421453_p06zlxsm.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Saving my daughter from Instagram self-harm]]></title>
+            <description><![CDATA[Ian said photos he saw on the social media platform were more graphic than things he had seen in the Army.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-47077003</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-47077003</guid>
+            <pubDate>Thu, 31 Jan 2019 17:51:06 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/17DC4/production/_105423779_p06zm8j8.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Haidilao: Robots staff China's top hotpot chain]]></title>
+            <description><![CDATA[Robot waiters and chefs form the future of hotpot chain Haidilao.]]></description>
+            <link>https://www.bbc.co.uk/news/business-46946431</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/business-46946431</guid>
+            <pubDate>Thu, 31 Jan 2019 00:21:42 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/FA86/production/_105343146_p06z8wct.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The PewDiePie Hackers: Could hacking printers ruin your life?]]></title>
+            <description><![CDATA[A popularity contest backing YouTube star, PewDiePie, got out of hand and two teenage hackers are in hiding.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-47032600</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-47032600</guid>
+            <pubDate>Tue, 29 Jan 2019 00:03:22 GMT</pubDate>
+            <media:thumbnail width="1045" height="588" url="http://c.files.bbci.co.uk/13D56/production/_105383218_mediaitem105383216.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Nick Clegg: 'Social media platforms must make protections better']]></title>
+            <description><![CDATA[The new Facebook vice-president says the firm will do "whatever it takes" to make its platforms safer.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-47036349</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-47036349</guid>
+            <pubDate>Mon, 28 Jan 2019 20:31:54 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/7EE7/production/_105378423_p06zcbmv.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Nera: The 3D-printed electric motorbike]]></title>
+            <description><![CDATA[The bike, made by BigRep, took three days to print and cost about £2,000 ($2,600) to produce.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-46894072</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-46894072</guid>
+            <pubDate>Mon, 28 Jan 2019 01:38:25 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/5B76/production/_105341432_p06z3009.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA['I was groomed on Grindr when I was 15']]></title>
+            <description><![CDATA[Greg wants other vulnerable teenagers to learn from his experience.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-northamptonshire-47007342</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-northamptonshire-47007342</guid>
+            <pubDate>Sun, 27 Jan 2019 00:11:54 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/516C/production/_105344802_p06z3jzw.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Trial for valet airport parking robots and other news]]></title>
+            <description><![CDATA[BBC Click's Jen Copestake looks at some of the best technology stories of the week.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-46919969</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-46919969</guid>
+            <pubDate>Fri, 25 Jan 2019 00:08:21 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/8C8E/production/_105328953_p06z0f0n.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Far Cry returns with post-nuclear apocalypse in New Dawn]]></title>
+            <description><![CDATA[Marc Cieslak looks at the latest instalment in the first-person shooter series ahead of its release.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-46927381</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-46927381</guid>
+            <pubDate>Thu, 24 Jan 2019 16:22:30 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/9C60/production/_105323004_p06yzx90.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Instagram boss responds to suicide claims]]></title>
+            <description><![CDATA[Parent company Facebook says it is "deeply upset" by the death of Molly Russell, and is reviewing its policies.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-46979461</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-46979461</guid>
+            <pubDate>Wed, 23 Jan 2019 17:10:21 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/71DF/production/_105315192_p06ywfvh.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Instagram 'helped kill my daughter']]></title>
+            <description><![CDATA[After Molly Russell took her own life, her family found distressing material through her Instagram account.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-46966009</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-46966009</guid>
+            <pubDate>Tue, 22 Jan 2019 17:38:13 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/4786/production/_105301381_p06yst6q.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[How virtual reality can help you manage pain]]></title>
+            <description><![CDATA[A company in Israel is using virtual reality computer games to help patients deal with chronic pain.]]></description>
+            <link>https://www.bbc.co.uk/news/business-46964729</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/business-46964729</guid>
+            <pubDate>Wed, 23 Jan 2019 00:18:24 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/8502/production/_105305043_p06ysggm.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[CES 2019: Smart socket to charge your devices]]></title>
+            <description><![CDATA[BBC Click's Lara Lewington looks at a new smart socket for charging devices.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-46826795</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-46826795</guid>
+            <pubDate>Mon, 21 Jan 2019 08:58:12 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/1BD3/production/_105132170_p06xql4d.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The girl scouts with a cybersecurity badge]]></title>
+            <description><![CDATA[It's part of a drive to get more girls involved in science, technology engineering and mathematics from a young age.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-46911157</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-46911157</guid>
+            <pubDate>Sun, 20 Jan 2019 00:04:43 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/1092C/production/_105248876_p06ylwds.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Rise in nude photos sent to phones on public transport]]></title>
+            <description><![CDATA[BBC Minute's Ione Wells investigates the rising trend of 'cyber-flashing' where naked photos are being sent by strangers to people's phones.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-46926991</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-46926991</guid>
+            <pubDate>Sat, 19 Jan 2019 00:06:27 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/14F4A/production/_105243858_p06yhjmt.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Robot dinosaur sacked and other technology news]]></title>
+            <description><![CDATA[BBC Click’s Stephen Beckett looks at some of the best tech news stories of the week.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-46865514</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-46865514</guid>
+            <pubDate>Fri, 18 Jan 2019 08:35:33 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/5AE7/production/_105217232_p06ycnqn.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Are these the faces of the future?]]></title>
+            <description><![CDATA[Are these the faces of the future? It's clear these robots are no ordinary machines.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-scotland-46925179</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-scotland-46925179</guid>
+            <pubDate>Fri, 18 Jan 2019 18:57:14 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/13BAE/production/_105241808_p06yh4w4.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Ace Combat 7: Can it match flying in real-life?]]></title>
+            <description><![CDATA[The latest version of the game has a new VR mode for more realistic aerial acrobatics.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-46865517</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-46865517</guid>
+            <pubDate>Thu, 17 Jan 2019 00:58:30 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/1415F/production/_105217228_p06y4cf1.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Laser shoes made for Parkinson's patients]]></title>
+            <description><![CDATA[People with Parkinson's can freeze when they walk but laser shoes are helping them to keep moving.]]></description>
+            <link>https://www.bbc.co.uk/news/stories-46737333</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/stories-46737333</guid>
+            <pubDate>Thu, 17 Jan 2019 00:47:36 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/22F6/production/_105205980_p06y86ml.jpg"/>
+        </item>
+    </channel>
+</rss>
