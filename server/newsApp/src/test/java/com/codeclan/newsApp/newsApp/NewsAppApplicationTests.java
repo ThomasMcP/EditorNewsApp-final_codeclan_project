@@ -110,6 +110,19 @@ public class NewsAppApplicationTests {
 	}
 
 
+	@Test
+	public void canGetArticleByTitle(){
+		List<Article> found = articleRepository.findArticleByTitle("Tech Talks");
+		assertEquals("Tech Talks", found.get(0).getTitle());
+	}
+
+	@Test
+	public void canGetArticleByJournalistId(){
+		List<Article> found = articleRepository.findArticleByJournalistId(2L);
+		assertEquals(1, found.size());
+	}
+
+
 
 
 
