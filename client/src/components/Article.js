@@ -8,7 +8,7 @@ class Article extends Component {
 
         <div className="article-header">
           <div className="article-title">
-            {this.props.article.title}
+            <a href={this.props.article.url}>{this.props.article.title}</a>
           </div>
         </div>
 
