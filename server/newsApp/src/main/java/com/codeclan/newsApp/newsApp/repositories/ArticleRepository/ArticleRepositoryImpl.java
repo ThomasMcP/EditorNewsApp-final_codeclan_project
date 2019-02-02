@@ -1,4 +1,4 @@
 package com.codeclan.newsApp.newsApp.repositories.ArticleRepository;
 
-public class JournalistRepositoryImpl {
+public class ArticleRepositoryImpl {
 }
