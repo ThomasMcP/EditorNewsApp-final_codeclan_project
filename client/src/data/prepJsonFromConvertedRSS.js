@@ -1,4 +1,4 @@
-const MockData = require('./feed.js');
+const MockData = require('./feed2.js');
 const fs = require('fs');
 
 let mockItems = [];
@@ -17,7 +17,7 @@ MockData.rss.channel.item.forEach((item) => {
 });
 
 const str = JSON.stringify(mockItems);
-fs.appendFile('mockdata.js', str, (err) => {
+fs.appendFile('mockdata2.js', str, (err) => {
     if (err) throw err;
     console.log('File written!');
 });
