@@ -22,7 +22,7 @@ public class Journalist {
     @OneToMany(mappedBy = "journalist", fetch = FetchType.LAZY)
     private List<Article> articles;
 
-    public Journalist(String name, List<Article> articles) {
+    public Journalist(String name) {
         this.name = name;
         this.articles = new ArrayList<>();
     }

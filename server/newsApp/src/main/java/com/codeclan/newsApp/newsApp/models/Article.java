@@ -28,6 +28,7 @@ public class Article {
 
     @Column(name = "date")
     private Date date;
+//    THIS IS YYYY/MM/DD
 
     @Column(name = "content")
     private String content;
