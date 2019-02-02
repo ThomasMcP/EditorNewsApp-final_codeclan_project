@@ -5,17 +5,21 @@ class Article extends Component {
   render() {
     return (
       <div className="article">
-        <div className="article-title">
-          {this.props.article.title}
+        <div className="article-header">
+          <div className="article-title">
+            {this.props.article.title}
+          </div>
+          <div className="article-author">
+            {this.props.article.author}
+          </div>
         </div>
-        <div className="article-author">
-          {this.props.article.author}
-        </div>
-        <div className="article-description">
-          {this.props.article.description}
-        </div>
-        <div className="article-date">
-          {this.props.article.date}
+        <div className="article-body">
+          <div className="article-description">
+            {this.props.article.description}
+          </div>
+          <div className="article-date">
+            {this.props.article.date}
+          </div>
         </div>
         <div className="article-image">
           <img
