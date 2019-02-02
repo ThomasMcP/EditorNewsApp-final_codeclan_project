@@ -6,5 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface JournalistRepository extends JpaRepository<Journalist, Long>, JournalistRepositoryCustom {
-    List<Journalist> findJournalistsByName(String name);
+
+    List<Journalist> findJournalistByName(String name);
+
 }

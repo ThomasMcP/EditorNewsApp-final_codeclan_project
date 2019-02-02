@@ -1,4 +1,7 @@
 package com.codeclan.newsApp.newsApp.repositories.ArticleRepository;
 
-public interface ArticleRepository {
+import com.codeclan.newsApp.newsApp.models.Article;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ArticleRepository extends JpaRepository<Article, Long>, ArticleRepositoryCustom {
 }

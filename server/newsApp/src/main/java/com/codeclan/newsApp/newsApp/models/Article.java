@@ -41,7 +41,7 @@ public class Article {
         this.journalist = journalist;
         this.description = description;
         this.url = url;
-        this.date = date;
+        this.date = new Date();
         this.content = content;
         this.imageLink = imageLink;
     }

@@ -38,6 +38,14 @@ public class Journalist {
         this.id = id;
     }
 
+    public void addArticle(Article article){
+        this.articles.add(article);
+    }
+
+    public int countArticles(){
+        return this.articles.size();
+    }
+
     public String getName() {
         return name;
     }
