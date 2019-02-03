@@ -34,14 +34,6 @@ public class NewsAppApplicationTests {
 //		assertEquals("Saving my daughter from Instagram self-harm", found.get(1).getTitle());
 //
 //	}
-//
-//	@Test
-//	public void canGetArticlesByCategory(){
-//		// TO-DO...
-//	}
-//	@Test
-//	public void canGetJournalistByName(){
-//		// TO-DO...
-//	}
+
 
 	}

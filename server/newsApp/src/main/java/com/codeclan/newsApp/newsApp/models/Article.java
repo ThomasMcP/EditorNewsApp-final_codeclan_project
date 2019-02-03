@@ -10,46 +10,45 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="title")
+    @Column(name = "title")
     private String title;
 
-    @Column(name="Category")
-    private Category category;
+//   @Column(name="Category")
+//   private Category category;
 
     @Column(name = "description")
     private String description;
 
-    @Column(name="url")
+    @Column(name = "url")
     private String url;
 
-    @Column(name="datetime")
-    private String datetime;//(String for now) maybe
-    // change to timestamp later and use
-    // compareTo() method for sorting and to help map most viewers)
+    @Column(name = "datetime")
+    private String datetime;//(String for now) change to timestamp later
 
     @ManyToOne
     @JoinColumn(name = "journalist_id", nullable = false)
     private Journalist journalist;
+    private Category category;
 
     public Article(Long id, String title, Category category, String description,
-                   String url, Journalist journalist){ //String date
+                   String url, Journalist journalist) { //String date
         this.id = id;
         this.title = title;
         this.description = description;
         this.url = url;
-//      this.datetime = datetime;
         this.journalist = journalist;
         this.category = category;
     }
 
-    public Article(){
+    public Article() {
 
     }
 
-    public Long getId(){
+    public Long getId() {
         return id;
     }
-    public void setId(Long id){
+
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -86,14 +85,9 @@ public class Article {
         this.url = url;
     }
 
-
     public Journalist getJournalist() {
         return journalist;
     }
-
-//    public void setJournalist(Journalist journalist){
-//        this.journalist = journalist;
-//    }
 
 //    public String getDatetime() {
 //        return datetime;
