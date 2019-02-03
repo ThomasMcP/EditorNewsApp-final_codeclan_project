@@ -7,19 +7,30 @@ class Article extends Component {
       <div className="article-header">
         {this.props.article.title}
       </div>
-      <div className="article-body">
-        <div className="article-date">
-          {this.props.article.date}
+      <div className="article-bottom">
+        <div className="article-body">
+          <div className="article-date">
+            {this.props.article.date}
+          </div>
+          <div className="article-description">
+          {this.props.article.description}
+          </div>
         </div>
-        <div className="article-description">
-        {this.props.article.description}
+        <div className="article-image">
+          <img src={this.props.article.imagelink} />
         </div>
-      </div>
-      <div className="article-image">
-        <img src={this.props.article.imagelink} />
-      </div>
-      <div className="article-footer">
-        <h1>Buttons Here!</h1>
+        <div className="article-footer">
+          <div className="buttons">
+          <button class="button-edit"
+            type="button">
+              Edit
+          </button>
+          <button class="button-delete"
+                  type="button">
+              Delete
+          </button>
+          </div>
+        </div>
       </div>
     </div>
   )

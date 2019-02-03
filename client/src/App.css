@@ -48,14 +48,34 @@ img {
 }
 
 .article {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 5rem 1fr;
+}
+
+.article-header {
+  height: 3rem;
+}
+
+.article-bottom {
   padding: 1rem 1rem 2rem 1rem;
-  border: 1px solid black;
   display: grid;
   grid-column-gap: 1rem;
   grid-template-areas:
-     "tit tit tit tit tit tit"
-     "tit tit tit tit tit tit"
      "pic pic txt txt txt txt"
      "pic pic txt txt txt txt"
      " .   .  but but but but";
+}
+
+button {
+  font-size: 1rem;
+  border:1px solid black;
+  padding: .5rem;
+  border-radius: .5rem;
+  margin: 1rem;
+}
+
+.button-delete {
+  background-color: red;
+  color: white;
 }
