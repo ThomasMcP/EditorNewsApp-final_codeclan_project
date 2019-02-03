@@ -16,6 +16,7 @@ class Article extends Component {
         </div>
       </div>
       <div className="article-image">
+        <img src={this.props.article.imagelink} />
       </div>
       <div className="article-footer">
       </div>
