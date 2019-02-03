@@ -19,6 +19,7 @@ class Article extends Component {
         <img src={this.props.article.imagelink} />
       </div>
       <div className="article-footer">
+        <h1>Buttons Here!</h1>
       </div>
     </div>
   )

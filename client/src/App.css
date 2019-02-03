@@ -21,6 +21,29 @@ img {
   height: 256px;
 }
 
+.article-header {
+  grid-area: tit;
+}
+
+.article-body {
+  grid-area: txt;
+}
+
+.article-image {
+  grid-area: pic;
+}
+
+.article-footer {
+  grid-area: but;
+}
+
 .article {
   border: 1px solid black;
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-template-areas:
+     "tit tit tit tit tit tit"
+     "pic pic txt txt txt txt"
+     "pic pic txt txt txt txt"
+     " .   .  but but but but";
 }
