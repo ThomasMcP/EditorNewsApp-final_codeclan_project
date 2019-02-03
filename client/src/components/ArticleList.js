@@ -6,7 +6,7 @@ class ArticleList extends Component {
   render(){
     const articles = this.props.articles.map((article) => {
       return (
-        <div className="article" key={article.id}>
+        <div className="article-style" key={article.id}>
           <Article article={article} />
         </div>
       )
