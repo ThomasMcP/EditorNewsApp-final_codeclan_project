@@ -13,17 +13,14 @@ public class Article {
     @Column(name="title")
     private String title;
 
+    @Column(name="Category")
+    private Category category;
+
     @Column(name = "description")
     private String description;
 
-    @Column(name= "category")
-    private String category;
-
     @Column(name="url")
     private String url;
-
-    @Column(name="imageURL")
-    private String imageLink;
 
     @Column(name="datetime")
     private String datetime;//(String for now) maybe
@@ -32,18 +29,17 @@ public class Article {
 
     @ManyToOne
     @JoinColumn(name = "journalist_id", nullable = false)
-    private  Journalist journalist;
+    private Journalist journalist;
 
-
-    public Article(String title, String description,
-                   String category, String url, String imageLink){ //String date
+    public Article(Long id, String title, Category category, String description,
+                   String url, Journalist journalist){ //String date
+        this.id = id;
         this.title = title;
         this.description = description;
-        this.category = category;
         this.url = url;
 //      this.datetime = datetime;
-        this.imageLink = imageLink;
         this.journalist = journalist;
+        this.category = category;
     }
 
     public Article(){
@@ -65,6 +61,14 @@ public class Article {
         this.title = title;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -73,13 +77,6 @@ public class Article {
         this.description = description;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category ){
-        this.category = category;
-    }
 
     public String getUrl() {
         return url;
@@ -89,18 +86,14 @@ public class Article {
         this.url = url;
     }
 
-    public String getImageLink() {
-        return imageLink;
-    }
-
-    public void setImageLink(String imageLink) {
-        this.imageLink = imageLink;
-    }
-
 
     public Journalist getJournalist() {
         return journalist;
     }
+
+//    public void setJournalist(Journalist journalist){
+//        this.journalist = journalist;
+//    }
 
 //    public String getDatetime() {
 //        return datetime;
