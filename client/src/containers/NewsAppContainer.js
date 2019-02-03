@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import MockData from '../data/mockdata.js';
 import ArticleList from '../components/ArticleList.js'
-import NavBar from '../components/NavBar.js';
+import NavBar2 from '../components/NavBar2.js';
 
 class NewsAppContainer extends Component {
   constructor(props){
@@ -14,7 +14,7 @@ class NewsAppContainer extends Component {
   render(){
     return (
       <>
-      <NavBar />
+      <NavBar2 />
       <ArticleList articles={this.state.articles} />
       </>
     )
