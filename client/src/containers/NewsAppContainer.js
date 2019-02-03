@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import MockData from '../data/mockdata.js';
 import ArticleList from '../components/ArticleList.js'
 import NavBar2 from '../components/NavBar2.js';

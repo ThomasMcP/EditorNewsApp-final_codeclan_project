@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 
-const styles = theme => ({
-  button: {
-    margin: theme.spacing.unit,
-  },
-  input: {
-    display: 'none',
-  },
-});
+// const styles = theme => ({
+//   button: {
+//     margin: theme.spacing.unit,
+//   },
+//   input: {
+//     display: 'none',
+//   },
+// });
 
 class Article extends Component {
 
-  constructor() {
-    //this.handleEdit = this.handleEdit.bind(this);
-    super();
-  }
+  // constructor() {
+  //   //this.handleEdit = this.handleEdit.bind(this);
+  //   super();
+  // }
 
   handleEdit(article){
     console.log("In handleEdit");
@@ -23,7 +23,7 @@ class Article extends Component {
   }
 
   render(){
-    const onEditClicked = this.handleEdit;
+    //const onEditClicked = this.handleEdit;
     //debugger;
     return (
     <div className="article">
@@ -40,7 +40,7 @@ class Article extends Component {
           </div>
         </div>
         <div className="article-image">
-          <img src={this.props.article.imagelink} />
+          <img alt="{this.props.article.title}" src={this.props.article.imagelink} />
         </div>
         <div className="article-footer">
           <div className="buttons">
@@ -48,7 +48,7 @@ class Article extends Component {
             variant="contained"
             color="primary"
             className="button"
-             onClick={() => this.handleEdit(this.props.article)}
+            onClick={() => this.handleEdit(this.props.article)}
           >
               Edit
           </Button>
