@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
+
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
+  input: {
+    display: 'none',
+  },
+});
 
 class Article extends Component {
   render(){
+    //debugger;
     return (
     <div className="article">
       <div className="article-header">
@@ -21,14 +32,12 @@ class Article extends Component {
         </div>
         <div className="article-footer">
           <div className="buttons">
-          <button className="button-edit"
-            type="button">
+          <Button variant="contained" color="primary" className="button">
               Edit
-          </button>
-          <button className="button-delete"
-                  type="button">
+          </Button>
+          <Button variant="contained" color="secondary" className="button">
               Delete
-          </button>
+          </Button>
           </div>
         </div>
       </div>

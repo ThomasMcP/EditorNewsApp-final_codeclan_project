@@ -76,7 +76,6 @@ button {
   margin: 1rem;
 }
 
-.button-delete {
-  background-color: red;
-  color: white;
+.button {
+  padding: 1rem;
 }
