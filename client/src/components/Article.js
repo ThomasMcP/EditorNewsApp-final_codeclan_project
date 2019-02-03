@@ -21,11 +21,11 @@ class Article extends Component {
         </div>
         <div className="article-footer">
           <div className="buttons">
-          <button class="button-edit"
+          <button className="button-edit"
             type="button">
               Edit
           </button>
-          <button class="button-delete"
+          <button className="button-delete"
                   type="button">
               Delete
           </button>
