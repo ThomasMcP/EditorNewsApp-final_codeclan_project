@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 
 class Article extends Component {
+  constructor(props){
+    super(props);
+  }
 
   render() {
     return (
@@ -35,7 +38,7 @@ class Article extends Component {
           <button type="button">
               Edit
           </button>
-          <button type="button">
+          <button type="button" onClick={() => {this.handleDelete(this.props.article)}}>
               Delete
           </button>
           <hr />

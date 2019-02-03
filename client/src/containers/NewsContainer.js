@@ -9,6 +9,13 @@ class NewsContainer extends Component {
     this.state = {
       articles: MockData
     }
+
+    this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  handleDelete(selectedArticle){
+    const newArray = this.props.articles.filter(article => article !== selectedArticle)
+
   }
 
   render() {
