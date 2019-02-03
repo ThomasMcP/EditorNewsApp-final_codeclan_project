@@ -55,10 +55,13 @@ img {
   display: flex;
   flex-direction: column;
   flex-basis: 5rem 1fr;
+  border-bottom: 2px solid black;
 }
 
 .article-header {
   height: 3rem;
+  margin: 1rem;
+  font-size: 1.3rem;
 }
 
 .article-bottom {
@@ -67,8 +70,7 @@ img {
   grid-column-gap: 1rem;
   grid-template-areas:
      "pic pic txt txt txt txt"
-     "pic pic txt txt txt txt"
-     " .   .  but but but but";
+     "pic pic but but but but";
 }
 
 button {
@@ -79,7 +81,6 @@ button {
   margin: 1rem;
 }
 
-.button-delete {
-  background-color: red;
-  color: white;
+.button {
+  padding: 1rem;
 }
