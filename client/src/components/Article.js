@@ -11,8 +11,11 @@ const styles = theme => ({
 });
 
 class Article extends Component {
+  handleEdit(article){
+    debugger;
+  }
   render(){
-    //debugger;
+    const onEditClicked = this.handleEdit(this.props.article);
     return (
     <div className="article">
       <div className="article-header">
@@ -32,7 +35,7 @@ class Article extends Component {
         </div>
         <div className="article-footer">
           <div className="buttons">
-          <Button variant="contained" color="primary" className="button">
+          <Button variant="contained" color="primary" className="button" onClick={onEditClicked}>
               Edit
           </Button>
           <Button variant="contained" color="secondary" className="button">

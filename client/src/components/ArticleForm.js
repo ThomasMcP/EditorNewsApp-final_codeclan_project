@@ -38,12 +38,6 @@ class ArticleForm extends React.Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.setState({
-  //     labelWidth: ReactDOM.findDOMNode(this.props.InputLabelRef).offsetWidth,
-  //   });
-  // }
-
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
