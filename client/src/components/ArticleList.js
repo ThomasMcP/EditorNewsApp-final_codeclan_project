@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Article from './Article.js';
 
 class ArticleList extends Component {
 
@@ -6,7 +7,7 @@ class ArticleList extends Component {
     const articles = this.props.articles.map((article) => {
       return (
         <div className="article" key={article.id}>
-          <h1>{article.title}</h1>
+          <Article article={article} />
         </div>
       )
     })
