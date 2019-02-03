@@ -28,8 +28,10 @@ const styles = theme => ({
 });
 
 class ArticleForm extends React.Component {
+
   constructor(props){
     super(props);
+    console.dir(this.props.article);
     this.state = {
       title: "",
       date: "",

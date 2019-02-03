@@ -10,7 +10,11 @@ class Main extends Component {
       <Router>
         <Fragment>
           <Route exact path="/" component={NewsAppContainer} />
-          <Route path="/edit-article" component={ArticleForm} />
+          <Route
+            path="/edit-article"
+            //component={ArticleForm}
+            render={ props => <ArticleForm {...props} /> }
+          />
         </Fragment>
       </Router>
     );

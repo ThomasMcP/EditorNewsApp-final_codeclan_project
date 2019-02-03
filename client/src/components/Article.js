@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
+import { Redirect } from 'react-router'
+import ArticleForm from './ArticleForm';
+
 
 // const styles = theme => ({
 //   button: {
@@ -12,19 +15,27 @@ import Button from '@material-ui/core/Button';
 
 class Article extends Component {
 
-  // constructor() {
-  //   //this.handleEdit = this.handleEdit.bind(this);
-  //   super();
-  // }
+  constructor() {
+    super();
+    this.state = {
+      redirectEdit: false
+    }
+  }
 
   handleEdit(article){
     console.log("In handleEdit");
     console.dir(article);
+    // https://stackoverflow.com/a/43230829/5158630
+    this.setState({redirectEdit:true});
   }
 
   render(){
-    //const onEditClicked = this.handleEdit;
-    //debugger;
+    const { redirectEdit } = this.state;
+    if (redirectEdit) {
+      return(
+        <ArticleForm article={this.props.article} />
+      )
+    }
     return (
     <div className="article">
       <div className="article-header">
