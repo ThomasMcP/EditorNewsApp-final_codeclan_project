@@ -5,6 +5,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
 //import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
+import { Redirect } from 'react-router'
+
 
 
 const styles = theme => ({
@@ -32,7 +34,8 @@ class AuthorForm extends React.Component {
     console.dir(article);
 
     this.state = {
-      article: article
+      article: article,
+      redirectAuthorFormEdit: false
     };
   }
 
@@ -40,8 +43,25 @@ class AuthorForm extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  handleAuthorFormEdit(article){
+    console.log("In Author Edit");
+    this.setState({redirectAuthorFormEdit:true});
+  }
+
   render() {
     const { classes } = this.props;
+
+    const {redirectAuthorFormEdit } = this.state;
+    if (redirectAuthorFormEdit) {
+      return(
+        <Redirect
+          to={{
+            pathname: "/",
+            search: "",
+          }}
+        />
+      )
+    }
 
     return (
       <form className={classes.root} autoComplete="off">
@@ -59,7 +79,12 @@ class AuthorForm extends React.Component {
         <Button variant="contained" color="primary" className="button">
           Save
         </Button>
-        <Button variant="contained" color="secondary" className="button">
+        <Button
+          variant="contained"
+          color="secondary"
+          className="button"
+          onClick={() => this.handleAuthorFormEdit(this.props.article)}
+        >
           Cancel
         </Button>
       </form>
