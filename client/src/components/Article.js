@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import { Redirect } from 'react-router'
 import ArticleForm from './ArticleForm';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import IconButton from '@material-ui/core/IconButton';
+
+
 
 
 class Article extends Component {
@@ -9,7 +13,8 @@ class Article extends Component {
   constructor() {
     super();
     this.state = {
-      redirectEdit: false
+      redirectEdit: false,
+      redirectAuthorEdit: false
     }
   }
 
@@ -20,8 +25,13 @@ class Article extends Component {
     this.setState({redirectEdit:true});
   }
 
+  handleAuthorEdit(article){
+    console.log("In Author Edit");
+    this.setState({redirectAuthorEdit:true});
+  }
+
   render(){
-    const { redirectEdit } = this.state;
+    const { redirectEdit, redirectAuthorEdit } = this.state;
     if (redirectEdit) {
       return(
         <Redirect
@@ -35,6 +45,22 @@ class Article extends Component {
         />
       )
     }
+
+    if (redirectAuthorEdit) {
+      return(
+        <Redirect
+          to={{
+            pathname: "/edit-author",
+            search: "",
+            state: {
+              article: this.props.article
+            }
+          }}
+        />
+      )
+    }
+
+
     return (
     <div className="article">
       <div className="article-header">
@@ -47,6 +73,12 @@ class Article extends Component {
           </div>
           <div className="article-author">
             {this.props.article.author}
+            <IconButton
+              color="inherit"
+              onClick={() => this.handleAuthorEdit(this.props.article)}
+            >
+              <AccountCircle />
+            </IconButton>
           </div>
           <div className="article-description">
           {this.props.article.description}
