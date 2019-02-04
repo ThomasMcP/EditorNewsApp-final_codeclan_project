@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 import static org.junit.Assert.assertEquals;
 
@@ -39,10 +40,10 @@ public class NewsAppApplicationTests {
 	public void setUp() {
 		journalist = new Journalist();
 		journalistRepository.save(journalist);
-
+        GregorianCalendar date1 = new GregorianCalendar(2018, 10, 03);
 		Article article1 = new Article("Tendril Nostrils",
 				"The investigation into the Bog Monster",
-				"http:bbc.co.uk/feed/", "http:src.image_placeholder", new Date((2019-02-2)*1000),"description", journalist );
+				"http:bbc.co.uk/feed/", "http:src.image_placeholder", date1,"description", journalist );
 		articleRepository.save(article1);
 	}
 

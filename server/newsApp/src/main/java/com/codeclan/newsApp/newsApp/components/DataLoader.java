@@ -11,6 +11,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 @Component
 public class DataLoader implements ApplicationRunner {
@@ -22,17 +23,19 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     JournalistRepository journalistRepository;
 
-    public DataLoader(){
+    public DataLoader() {
 
     }
+
     //    title; journalist; content;date; url;image_url;
-    public void run(ApplicationArguments args){
+    public void run(ApplicationArguments args) {
         Journalist david = new Journalist("Steven");
         journalistRepository.save(david);
 
+        GregorianCalendar date1 = new GregorianCalendar(2018, 10, 03);
         Article article1 = new Article("Tendril Nostrils",
                 "The investigation into the Bog Monster",
-                "http:bbc.co.uk/feed/", "http:src.image_placeholder", new Date(),"description here", david );
+                "http:bbc.co.uk/feed/", "http:src.image_placeholder", date1, "description here", david);
         articleRepository.save(article1);
 
 

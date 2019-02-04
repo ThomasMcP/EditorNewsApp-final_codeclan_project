@@ -3,6 +3,7 @@ package com.codeclan.newsApp.newsApp.models;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 @Entity
 @Table(name = "articles")
@@ -25,7 +26,7 @@ public class Article {
     private String url;
 
     @Column(name = "date ")
-    private Date date;
+    private GregorianCalendar date;
 
     @Column(name= "description")
     private String description;
@@ -34,7 +35,7 @@ public class Article {
     private Journalist journalist;
 
     public Article(String title, String content,
-                   String url, String image_url , Date date, String description, Journalist journalist) {
+                   String url, String image_url , GregorianCalendar date, String description, Journalist journalist) {
         this.title = title;
         this.content = content;
         this.url = url;
@@ -89,6 +90,13 @@ public class Article {
         this.url = url;
     }
 
+    public GregorianCalendar getDate(){
+        return date;
+    }
+
+    public void setDate(GregorianCalendar date) {
+        this.date = date;
+    }
 
     public String getDescription() {
         return description;
