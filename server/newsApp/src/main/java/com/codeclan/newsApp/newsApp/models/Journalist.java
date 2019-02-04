@@ -20,7 +20,7 @@ public class Journalist {
     private String name;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "journalist", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "journalist", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Article> articles;
 
     public Journalist(String name) {
