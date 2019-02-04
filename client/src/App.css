@@ -10,7 +10,10 @@ html {
   background-color: white;
 }
 
-
+form {
+  max-width: 80%;
+  margin: 0 auto;
+}
 
 .article-list {
   margin-top: 5rem;
@@ -31,6 +34,11 @@ img {
 
 .article-body {
   grid-area: txt;
+}
+
+.article-description,
+.article-content {
+  padding-bottom: 1rem;
 }
 
 .article-image {

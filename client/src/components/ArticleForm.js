@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
+import Button from '@material-ui/core/Button';
 //import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 
@@ -13,7 +14,7 @@ const styles = theme => ({
   },
   formControl: {
     margin: theme.spacing.unit,
-    minWidth: 500,
+    minWidth: "90%"
   },
   selectEmpty: {
     marginTop: theme.spacing.unit * 2,
@@ -84,6 +85,17 @@ class ArticleForm extends React.Component {
          variant="outlined"
        />
        <TextField
+        id="outlined-textarea"
+        label="Full article"
+        placeholder="Full article text"
+        defaultValue={this.state.article.content}
+        multiline
+        rows="8"
+        className={classes.textField}
+        margin="normal"
+        variant="outlined"
+      />
+       <TextField
         id="outlined-with-placeholder"
         label="ImageLink"
         placeholder="Enter ImageLink"
@@ -93,6 +105,12 @@ class ArticleForm extends React.Component {
         variant="outlined"
        />
         </FormControl>
+        <Button variant="contained" color="primary" className="button">
+          Save
+        </Button>
+        <Button variant="contained" color="secondary" className="button">
+          Cancel
+        </Button>
       </form>
     );
   }
