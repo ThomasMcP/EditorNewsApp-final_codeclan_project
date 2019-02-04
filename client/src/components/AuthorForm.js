@@ -30,11 +30,37 @@ class AuthorForm extends React.Component {
     //debugger;
     console.log("In article form constructor")
 
-    const article = this.props.location.state.article;
+    let article;
+    let author;
+    if (this.props.location.state === undefined) {
+      // if no article provided then make placeholder
+      // article and author
+      article = {
+        name: "",
+        author: "",
+        description: "",
+        imagelink: "",
+        content: "",
+        date: ""
+      };
+      author = {
+        name: ""
+      }
+    }
+    else {
+      // if one sent in props, use it.
+      article = this.props.location.state.article;
+      author = {
+        name: article.author
+      }
+    }
+
     console.dir(article);
+    console.dir(author);
 
     this.state = {
       article: article,
+      author: author,
       redirectAuthorFormEdit: false
     };
   }
