@@ -22,7 +22,7 @@ public class JournalistController {
     ArticleRepository articleRepository;
 
     @GetMapping(value = "/{id}")
-    public List<Journalist> getJournalistsWithName(@PathVariable Long id) {
+    public List<Journalist> getJournalistsById(@PathVariable Long id) {
         return journalistRepository.findJournalistById(id);
     }
 
