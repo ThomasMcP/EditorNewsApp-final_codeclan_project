@@ -1,4 +1,21 @@
 package com.codeclan.newsApp.newsApp.repositories.ArticleRepository;
 
-public interface ArticleRepository {
+import com.codeclan.newsApp.newsApp.models.Article;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Date;
+import java.util.List;
+
+public interface ArticleRepository extends JpaRepository<Article, Long>,
+        ArticleRepositoryCustom {
+    // Spring Data JPA Method ("Derived") Query
+    List<Article> getArticlesByTitle(String title);
+
+//    return list of articles sorted by date
+    List<Article> getArticlesByDate(Date date);
+
+    //will return articles by said journalist based on id
+    List<Article> getAllJournalistByName(String name);
 }
+
+
