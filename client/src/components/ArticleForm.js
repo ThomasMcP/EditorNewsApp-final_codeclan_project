@@ -1,15 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import FilledInput from '@material-ui/core/FilledInput';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+//import Select from '@material-ui/core/Select';
+import TextField from '@material-ui/core/TextField';
+
 
 const styles = theme => ({
   root: {
@@ -18,24 +13,26 @@ const styles = theme => ({
   },
   formControl: {
     margin: theme.spacing.unit,
-    minWidth: 120,
+    minWidth: 500,
   },
   selectEmpty: {
     marginTop: theme.spacing.unit * 2,
   },
 });
 
-class SimpleSelect extends React.Component {
-  state = {
-    age: '',
-    name: 'hai',
-    labelWidth: 0,
-  };
+class ArticleForm extends React.Component {
 
-  componentDidMount() {
-    this.setState({
-      labelWidth: ReactDOM.findDOMNode(this.InputLabelRef).offsetWidth,
-    });
+  constructor(props){
+    super(props);
+    //debugger;
+    console.log("In article form constructor")
+
+    const article = this.props.location.state.article;
+    console.dir(article);
+
+    this.state = {
+      article: article
+    };
   }
 
   handleChange = event => {
@@ -48,30 +45,61 @@ class SimpleSelect extends React.Component {
     return (
       <form className={classes.root} autoComplete="off">
         <FormControl className={classes.formControl}>
-          <InputLabel htmlFor="age-simple">Age</InputLabel>
-          <Select
-            value={this.state.age}
-            onChange={this.handleChange}
-            inputProps={{
-              name: 'age',
-              id: 'age-simple',
-            }}
-          >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </Select>
+          <TextField
+           id="outlined-full-width"
+           label="Title"
+           defaultValue = {this.state.article.title}
+           placeholder="Enter Article Title"
+           className={classes.textField}
+           margin="normal"
+           variant="outlined"
+         />
+         <TextField
+          id="outlined-with-placeholder"
+          label="Author"
+          defaultValue = ""
+          placeholder="Enter Author"
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"
+         />
+         <TextField
+          id="outlined-with-placeholder"
+          label="Date"
+          placeholder="Enter Date DD/MM/YYYY"
+          className={classes.textField}
+          defaultValue={this.state.article.date}
+          margin="normal"
+          variant="outlined"
+        />
+        <TextField
+         id="outlined-textarea"
+         label="Description"
+         placeholder="Enter Description"
+         defaultValue={this.state.article.description}
+         multiline
+         rows="4"
+         className={classes.textField}
+         margin="normal"
+         variant="outlined"
+       />
+       <TextField
+        id="outlined-with-placeholder"
+        label="ImageLink"
+        placeholder="Enter ImageLink"
+        defaultValue={this.state.article.imagelink}
+        className={classes.textField}
+        margin="normal"
+        variant="outlined"
+       />
         </FormControl>
       </form>
     );
   }
 }
 
-SimpleSelect.propTypes = {
+ArticleForm.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleSelect);
+export default withStyles(styles)(ArticleForm);

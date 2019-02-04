@@ -1,18 +1,40 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
+import { Redirect } from 'react-router'
+import ArticleForm from './ArticleForm';
 
-const styles = theme => ({
-  button: {
-    margin: theme.spacing.unit,
-  },
-  input: {
-    display: 'none',
-  },
-});
 
 class Article extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      redirectEdit: false
+    }
+  }
+
+  handleEdit(article){
+    console.log("In handleEdit");
+    console.dir(article);
+    // https://stackoverflow.com/a/43230829/5158630
+    this.setState({redirectEdit:true});
+  }
+
   render(){
-    //debugger;
+    const { redirectEdit } = this.state;
+    if (redirectEdit) {
+      return(
+        <Redirect
+          to={{
+            pathname: "/edit-article",
+            search: "",
+            state: {
+              article: this.props.article
+            }
+          }}
+        />
+      )
+    }
     return (
     <div className="article">
       <div className="article-header">
@@ -28,11 +50,16 @@ class Article extends Component {
           </div>
         </div>
         <div className="article-image">
-          <img src={this.props.article.imagelink} />
+          <img alt="{this.props.article.title}" src={this.props.article.imagelink} />
         </div>
         <div className="article-footer">
           <div className="buttons">
-          <Button variant="contained" color="primary" className="button">
+          <Button
+            variant="contained"
+            color="primary"
+            className="button"
+            onClick={() => this.handleEdit(this.props.article)}
+          >
               Edit
           </Button>
           <Button variant="contained" color="secondary" className="button">
