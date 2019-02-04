@@ -28,7 +28,9 @@ class Article extends Component {
           to={{
             pathname: "/edit-article",
             search: "",
-            article: this.state.article
+            state: {
+              article: this.props.article
+            }
           }}
         />
       )

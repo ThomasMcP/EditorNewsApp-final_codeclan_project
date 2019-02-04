@@ -24,8 +24,10 @@ class ArticleForm extends React.Component {
 
   constructor(props){
     super(props);
-    console.log("whoop!")
-    console.dir(this.props.article);
+    debugger;
+    console.log("In article form constructor")
+    console.dir(this.props.location.article);
+
     this.state = {
       title: this.props.article.title,
       date: this.props.article.date,
