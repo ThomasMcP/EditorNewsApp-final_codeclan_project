@@ -1,6 +1,7 @@
 package com.codeclan.newsApp.newsApp.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -18,7 +19,7 @@ public class Journalist {
     @Column(name = "name")
     private String name;
 
-    @JsonIgnoreProperties("journalists")
+    @JsonIgnore
     @OneToMany(mappedBy = "journalist", fetch = FetchType.LAZY)
     private List<Article> articles;
 

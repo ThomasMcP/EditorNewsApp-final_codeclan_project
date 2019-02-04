@@ -9,4 +9,6 @@ public interface JournalistRepository extends JpaRepository<Journalist, Long>, J
 
     List<Journalist> findJournalistByName(String name);
 
+    List<Journalist> findJournalistById(Long journalistId);
+
 }

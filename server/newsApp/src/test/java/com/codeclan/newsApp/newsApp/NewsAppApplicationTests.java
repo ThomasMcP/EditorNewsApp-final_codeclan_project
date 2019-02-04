@@ -122,6 +122,19 @@ public class NewsAppApplicationTests {
 		assertEquals(1, found.size());
 	}
 
+	@Test
+	public void canFindJournalistById(){
+		List<Journalist> found = journalistRepository.findJournalistById(1L);
+		assertEquals("Peter Parker", found.get(0).getName());
+	}
+
+	@Test
+	public void canGetArticleById(){
+		List<Article> found = articleRepository.findArticleById(1L);
+		assertEquals("Tech Talks", found.get(0).getTitle());
+	}
+
+
 
 
 

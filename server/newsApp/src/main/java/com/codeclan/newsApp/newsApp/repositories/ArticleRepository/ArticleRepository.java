@@ -13,7 +13,7 @@ public interface ArticleRepository extends JpaRepository<Article, Long>, Article
 
     List<Article> findArticleByJournalistId(Long journalistId);
 
-    List<Article> findArticleByDate(Date date);
+    List<Article> findArticleById(Long articleId);
 
 
 
