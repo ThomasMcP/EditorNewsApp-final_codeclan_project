@@ -11,9 +11,6 @@ public interface ArticleRepository extends JpaRepository<Article, Long>,
     // Spring Data JPA Method ("Derived") Query
     List<Article> getArticlesByTitle(String title);
 
-    //return list of articles by specific category e.g. tech...
-    List<Article> getArticlesByCategory(String category);
-
 //    return list of articles sorted by date
     List<Article> getArticlesByDate(Date date);
 

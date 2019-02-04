@@ -27,19 +27,20 @@ public class Article {
     @Column(name = "date ")
     private Date date;
 
+    @Column(name= "description")
+    private String description;
     @ManyToOne
     @JoinColumn(name = "journalist_id", nullable = false)
     private Journalist journalist;
-    private Category category;
 
-
-    public Article( String title, String content,
-                   String url, String image_url , Date date,Journalist journalist) {
+    public Article(String title, String content,
+                   String url, String image_url , Date date, String description, Journalist journalist) {
         this.title = title;
         this.content = content;
         this.url = url;
         this.image_url = image_url;
         this.date = date;
+        this.description = description;
         this.journalist = journalist;
     }
 
@@ -79,14 +80,6 @@ public class Article {
         this.content = content;
     }
 
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
 
     public String getUrl() {
         return url;
@@ -94,6 +87,15 @@ public class Article {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 

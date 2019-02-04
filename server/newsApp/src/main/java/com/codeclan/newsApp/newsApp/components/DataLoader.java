@@ -32,7 +32,7 @@ public class DataLoader implements ApplicationRunner {
 
         Article article1 = new Article("Tendril Nostrils",
                 "The investigation into the Bog Monster",
-                "http:bbc.co.uk/feed/", "http:src.image_placeholder", new Date(2019-02-2), david );
+                "http:bbc.co.uk/feed/", "http:src.image_placeholder", new Date(),"", david );
         articleRepository.save(article1);
 
 

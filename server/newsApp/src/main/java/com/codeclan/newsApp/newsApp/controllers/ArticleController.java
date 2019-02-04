@@ -33,11 +33,6 @@ public class ArticleController {
 //            return articleRepository.getArticlesByDate(date);
 //        }
 
-        @GetMapping(value = "/category/{category}")
-        public List <Article> getAllArticlesByCategory(@PathVariable String category ){
-            return articleRepository.getArticlesByCategory(category);
-        }
-
         @GetMapping(value = "/name/{name}")
         public List <Article> getAllJournalistByName(@PathVariable String name ){
             return articleRepository.getAllJournalistByName(name);
