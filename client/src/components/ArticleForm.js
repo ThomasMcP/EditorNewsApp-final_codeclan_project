@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
+import Button from '@material-ui/core/Button';
 //import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
+import { Redirect } from 'react-router'
 
 
 const styles = theme => ({
@@ -13,7 +15,7 @@ const styles = theme => ({
   },
   formControl: {
     margin: theme.spacing.unit,
-    minWidth: 500,
+    minWidth: '100%'
   },
   selectEmpty: {
     marginTop: theme.spacing.unit * 2,
@@ -31,7 +33,8 @@ class ArticleForm extends React.Component {
     console.dir(article);
 
     this.state = {
-      article: article
+      article: article,
+      redirectClose: false
     };
   }
 
@@ -39,9 +42,24 @@ class ArticleForm extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  handleClose(article){
+    console.log("In Author Edit");
+    this.setState({redirectClose:true});
+  }
+
   render() {
     const { classes } = this.props;
-
+    const { redirectClose } = this.state;
+    if (redirectClose) {
+      return(
+        <Redirect
+          to={{
+            pathname: "/",
+            search: "",
+          }}
+        />
+      )
+    }
     return (
       <form className={classes.root} autoComplete="off">
         <FormControl className={classes.formControl}>
@@ -57,7 +75,7 @@ class ArticleForm extends React.Component {
          <TextField
           id="outlined-with-placeholder"
           label="Author"
-          defaultValue = ""
+          defaultValue={this.state.article.author}
           placeholder="Enter Author"
           className={classes.textField}
           margin="normal"
@@ -84,6 +102,17 @@ class ArticleForm extends React.Component {
          variant="outlined"
        />
        <TextField
+        id="outlined-textarea"
+        label="Full article"
+        placeholder="Full article text"
+        defaultValue={this.state.article.content}
+        multiline
+        rows="8"
+        className={classes.textField}
+        margin="normal"
+        variant="outlined"
+      />
+       <TextField
         id="outlined-with-placeholder"
         label="ImageLink"
         placeholder="Enter ImageLink"
@@ -93,6 +122,17 @@ class ArticleForm extends React.Component {
         variant="outlined"
        />
         </FormControl>
+        <Button variant="contained" color="primary" className="button">
+          Save
+        </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          className="button"
+          onClick={() => this.handleClose()}
+        >
+          Cancel
+        </Button>
       </form>
     );
   }
