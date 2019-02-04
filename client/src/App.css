@@ -37,10 +37,16 @@ img {
 }
 
 .article-date,
-.article-style,
-.article-description {
+.article-style {
   font-weight: bold;
-  font-size: 1.5rem;
+}
+
+.article-author {
+  color: maroon;
+}
+
+.article-description {
+  color: darkBlue;
 }
 
 .article-author,
