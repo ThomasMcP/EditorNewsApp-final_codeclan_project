@@ -11,32 +11,34 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+
+@RestController
+@RequestMapping(value = "/articles")
 public class ArticleController {
 
-    @RestController
-    @RequestMapping(value = "/articles")
-    public class JournalistController {
+    @Autowired
+    ArticleRepository articleRepository;
 
-        @Autowired
-        ArticleRepository articleRepository;
+    @Autowired
+    JournalistRepository journalistRepository;
 
-        @Autowired
-        JournalistRepository journalistRepository;
+    @GetMapping(value =  "/title/{title}")
+    public List<Article> getArticlesByTitle(@PathVariable String title){
+        return articleRepository.getArticlesByTitle(title);
+    }
 
-        @GetMapping(value =  "/title/{title}")
-        public List<Article> getArticlesByTitle(@PathVariable String title){
-            return articleRepository.getArticlesByTitle(title);
-        }
+    @GetMapping(value = "/journalist/id/{journalist_id}")
+    public List<Article> findArticleByJournalistId(@PathVariable Long journalist_id){
+        return  articleRepository.findArticleByJournalistId(journalist_id);
+    }
 
+    @GetMapping(value = "/{id}")
+    public List<Article> findArticleById(@PathVariable Long id){
+        return articleRepository.findArticleById(id);
+    }
 //        @GetMapping(value = "/date/{date}")
 //        public List<Article> getArticlesByDate(@PathVariable String date){
 //            return articleRepository.getArticlesByDate(date);
 //        }
 
-        @GetMapping(value = "/name/{name}")
-        public List <Article> getAllJournalistByName(@PathVariable String name ){
-            return articleRepository.getAllJournalistByName(name);
-        }
-
-    }
 }

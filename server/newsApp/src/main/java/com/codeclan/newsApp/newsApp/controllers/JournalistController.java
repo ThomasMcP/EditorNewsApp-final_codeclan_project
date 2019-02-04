@@ -26,4 +26,8 @@ public class JournalistController {
         return journalistRepository.findJournalistById(id);
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fa75ad8af2b90b0827a17f80e850007bad49f997
