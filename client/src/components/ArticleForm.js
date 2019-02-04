@@ -24,15 +24,14 @@ class ArticleForm extends React.Component {
 
   constructor(props){
     super(props);
-    debugger;
+    //debugger;
     console.log("In article form constructor")
-    console.dir(this.props.location.article);
+
+    const article = this.props.location.state.article;
+    console.dir(article);
 
     this.state = {
-      title: this.props.article.title,
-      date: this.props.article.date,
-      description: this.props.article.description,
-      imagelink: this.props.article.imagelink
+      article: article
     };
   }
 
@@ -49,7 +48,7 @@ class ArticleForm extends React.Component {
           <TextField
            id="outlined-full-width"
            label="Title"
-           defaultValue = {this.props.article.title}
+           defaultValue = {this.state.article.title}
            placeholder="Enter Article Title"
            className={classes.textField}
            margin="normal"
@@ -69,7 +68,7 @@ class ArticleForm extends React.Component {
           label="Date"
           placeholder="Enter Date DD/MM/YYYY"
           className={classes.textField}
-          defaultValue={this.props.article.date}
+          defaultValue={this.state.article.date}
           margin="normal"
           variant="outlined"
         />
@@ -77,7 +76,7 @@ class ArticleForm extends React.Component {
          id="outlined-textarea"
          label="Description"
          placeholder="Enter Description"
-         defaultValue={this.props.article.description}
+         defaultValue={this.state.article.description}
          multiline
          rows="4"
          className={classes.textField}
@@ -88,7 +87,7 @@ class ArticleForm extends React.Component {
         id="outlined-with-placeholder"
         label="ImageLink"
         placeholder="Enter ImageLink"
-        defaultValue={this.props.article.imagelink}
+        defaultValue={this.state.article.imagelink}
         className={classes.textField}
         margin="normal"
         variant="outlined"

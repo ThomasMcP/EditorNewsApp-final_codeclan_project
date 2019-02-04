@@ -13,7 +13,7 @@ class Main extends Component {
           <Route exact path="/" component={NewsAppContainer} />
           <Route
             path="/edit-article"
-            //component={ArticleForm}
+            // to pass props we need to render rather than use named component
             render={ props => <ArticleForm {...props} /> }
           />
         </Fragment>
