@@ -2,12 +2,15 @@ package com.codeclan.newsApp.newsApp.components;
 
 
 import com.codeclan.newsApp.newsApp.models.Article;
+import com.codeclan.newsApp.newsApp.models.Journalist;
 import com.codeclan.newsApp.newsApp.repositories.ArticleRepository.ArticleRepository;
 import com.codeclan.newsApp.newsApp.repositories.JournalistRepository.JournalistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
+
+import java.util.Date;
 
 @Component
 public class DataLoader implements ApplicationRunner {
@@ -22,16 +25,15 @@ public class DataLoader implements ApplicationRunner {
     public DataLoader(){
 
     }
-
+    //    title; journalist; content;date; url;image_url;
     public void run(ApplicationArguments args){
+        Journalist david = new Journalist();
+        journalistRepository.save(david);
 
-//        Article article1 = new Article("The robot tendrils that mimic plants, and other tech news","story 1","technology",
-//                "https//bbc.co.uk/rssfeed", "https://aws-static.image_not_real.co.uk");
-//        articleRepository.save(article1);
-//
-//        Article article2 = new Article("Saving my daughter from Instagram self-harm","another story 2","technology",
-//                "https//bbc.co.uk/rssfeed", "https://aws-static.image_not_real.co.uk");
-//        articleRepository.save(article2);
+        Article article1 = new Article("Tendril Nostrils",
+                "The investigation into the Bog Monster",
+                "http:bbc.co.uk/feed/", "http:src.image_placeholder", new Date(2019-02-2), david );
+        articleRepository.save(article1);
 
 
     }

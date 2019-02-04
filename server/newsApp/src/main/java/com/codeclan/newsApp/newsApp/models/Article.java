@@ -1,6 +1,8 @@
+
 package com.codeclan.newsApp.newsApp.models;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "articles")
@@ -13,31 +15,32 @@ public class Article {
     @Column(name = "title")
     private String title;
 
-//   @Column(name="Category")
-//   private Category category;
+    @Column(name = "image_url")
+    private String image_url;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "content")
+    private String content;
 
     @Column(name = "url")
     private String url;
 
-    @Column(name = "datetime")
-    private String datetime;//(String for now) change to timestamp later
+    @Column(name = "date ")
+    private Date date;
 
     @ManyToOne
     @JoinColumn(name = "journalist_id", nullable = false)
     private Journalist journalist;
     private Category category;
 
-    public Article(Long id, String title, Category category, String description,
-                   String url, Journalist journalist) { //String date
-        this.id = id;
+
+    public Article( String title, String content,
+                   String url, String image_url , Date date,Journalist journalist) {
         this.title = title;
-        this.description = description;
+        this.content = content;
         this.url = url;
+        this.image_url = image_url;
+        this.date = date;
         this.journalist = journalist;
-        this.category = category;
     }
 
     public Article() {
@@ -60,20 +63,28 @@ public class Article {
         this.title = title;
     }
 
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     public Category getCategory() {
         return category;
     }
 
     public void setCategory(Category category) {
         this.category = category;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
 
@@ -85,16 +96,12 @@ public class Article {
         this.url = url;
     }
 
+
     public Journalist getJournalist() {
         return journalist;
     }
 
-//    public String getDatetime() {
-//        return datetime;
-//    }
-
-//    public void setDatetime(String datetime) {
-//        this.datetime = datetime;
-//    }
-
+    public void setJournalist(Journalist journalist) {
+        this.journalist = journalist;
+    }
 }
