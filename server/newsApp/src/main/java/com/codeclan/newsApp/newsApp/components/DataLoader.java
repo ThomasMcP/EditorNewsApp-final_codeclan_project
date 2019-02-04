@@ -10,6 +10,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 @Component
 public class DataLoader implements ApplicationRunner {
@@ -37,9 +38,11 @@ public class DataLoader implements ApplicationRunner {
         journalistRepository.save(journalist3);
 
 
-        Date date1 = new Date(1988, 8, 22);
-        Date date2 = new Date(2019, 2, 2);
-        Date date3 = new Date(2018, 12, 25);
+        GregorianCalendar date1 = new GregorianCalendar(1988, 8, 22);
+        GregorianCalendar date2 = new GregorianCalendar(2019, 12, 25);
+        GregorianCalendar date3 = new GregorianCalendar(2000, 10, 31);
+
+
 
         Article article1 = new Article("Tech Talks", journalist1, "Description about it", "www.tech.com", date1, "Tech stuff", "image.link");
         articleRepository.save(article1);

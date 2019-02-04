@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 @Entity
 @Table(name = "articles")
@@ -27,7 +28,7 @@ public class Article {
     private String url;
 
     @Column(name = "date")
-    private Date date;
+    private GregorianCalendar date;
 //    THIS IS YYYY/MM/DD
 
     @Column(name = "content")
@@ -36,12 +37,12 @@ public class Article {
     @Column(name = "imageLink")
     private String imageLink;
 
-    public Article(String title, Journalist journalist, String description, String url, Date date, String content, String imageLink) {
+    public Article(String title, Journalist journalist, String description, String url, GregorianCalendar date, String content, String imageLink) {
         this.title = title;
         this.journalist = journalist;
         this.description = description;
         this.url = url;
-        this.date = new Date();
+        this.date = date;
         this.content = content;
         this.imageLink = imageLink;
     }
@@ -89,11 +90,11 @@ public class Article {
         this.url = url;
     }
 
-    public Date getDate() {
+    public GregorianCalendar getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(GregorianCalendar date) {
         this.date = date;
     }
 

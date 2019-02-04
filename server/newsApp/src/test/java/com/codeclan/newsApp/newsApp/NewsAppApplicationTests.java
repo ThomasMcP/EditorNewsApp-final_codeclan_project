@@ -3,6 +3,7 @@ package com.codeclan.newsApp.newsApp;
 import com.codeclan.newsApp.newsApp.models.Article;
 import com.codeclan.newsApp.newsApp.models.Journalist;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import com.codeclan.newsApp.newsApp.repositories.ArticleRepository.ArticleRepository;
@@ -40,7 +41,7 @@ public class NewsAppApplicationTests {
 	@Test
 	public void journalistHasArticle() {
 		Journalist journalist = new Journalist("Peter Parker");
-		Date date = new Date(2019, 02, 02);
+		GregorianCalendar date = new GregorianCalendar(2019, 02, 02);
 		Article article = new Article("Tech Talks", journalist, "Description about it", "www.tech.com", date, "Tech stuff", "image.link");
 		journalist.addArticle(article);
 		assertEquals(1, journalist.countArticles());
@@ -49,7 +50,7 @@ public class NewsAppApplicationTests {
 	@Test
 	public void articleHasTitle() {
 		Journalist journalist = new Journalist("Peter Parker");
-		Date date = new Date(2019, 02, 02);
+		GregorianCalendar date = new GregorianCalendar(2019, 02, 02);
 		Article article = new Article("Tech Talks", journalist, "Description about it", "www.tech.com", date, "Tech stuff", "image.link");
 		assertEquals("Tech Talks", article.getTitle());
 	}
@@ -57,7 +58,7 @@ public class NewsAppApplicationTests {
 	@Test
 	public void articleHasJournalist() {
 		Journalist journalist = new Journalist("Peter Parker");
-		Date date = new Date(2019, 02, 02);
+		GregorianCalendar date = new GregorianCalendar(2019, 02, 02);
 		Article article = new Article("Tech Talks", journalist, "Description about it", "www.tech.com", date, "Tech stuff", "image.link");
 		assertEquals(journalist, article.getJournalist());
 	}
@@ -65,7 +66,7 @@ public class NewsAppApplicationTests {
 	@Test
 	public void articleHasDescription(){
 		Journalist journalist = new Journalist("Peter Parker");
-		Date date = new Date(2019, 02, 02);
+		GregorianCalendar date = new GregorianCalendar(2019, 02, 02);
 		Article article = new Article("Tech Talks", journalist, "Description about it", "www.tech.com", date, "Tech stuff", "image.link");
 		assertEquals("Description about it", article.getDescription());
 
@@ -74,7 +75,7 @@ public class NewsAppApplicationTests {
 	@Test
 	public void articleHasUrl(){
 		Journalist journalist = new Journalist("Peter Parker");
-		Date date = new Date(2019, 02, 02);
+		GregorianCalendar date = new GregorianCalendar(2019, 02, 02);
 		Article article = new Article("Tech Talks", journalist, "Description about it", "www.tech.com", date, "Tech stuff", "image.link");
 		assertEquals("www.tech.com", article.getUrl());
 	}
@@ -90,7 +91,7 @@ public class NewsAppApplicationTests {
 	@Test
 	public void articleHasContent(){
 		Journalist journalist = new Journalist("Peter Parker");
-		Date date = new Date(2019, 02, 02);
+		GregorianCalendar date = new GregorianCalendar(2019, 02, 02);
 		Article article = new Article("Tech Talks", journalist, "Description about it", "www.tech.com", date, "Tech stuff", "image.link");
 		assertEquals("Tech stuff", article.getContent());
 	}
@@ -98,7 +99,7 @@ public class NewsAppApplicationTests {
 	@Test
 	public void articleHasImageLink(){
 		Journalist journalist = new Journalist("Peter Parker");
-		Date date = new Date(2019, 02, 02);
+		GregorianCalendar date = new GregorianCalendar(2019, 02, 02);
 		Article article = new Article("Tech Talks", journalist, "Description about it", "www.tech.com", date, "Tech stuff", "image.link");
 		assertEquals("image.link", article.getImageLink());
 	}
