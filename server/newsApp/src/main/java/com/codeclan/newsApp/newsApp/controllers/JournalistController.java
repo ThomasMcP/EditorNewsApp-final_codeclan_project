@@ -21,9 +21,13 @@ public class JournalistController {
     @Autowired
     ArticleRepository articleRepository;
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/id/{id}")
     public List<Journalist> getJournalistsById(@PathVariable Long id) {
         return journalistRepository.findJournalistById(id);
     }
 
+    @GetMapping
+    public List<Journalist> getAllJournalists(){
+        return journalistRepository.findAll();
+    }
 }

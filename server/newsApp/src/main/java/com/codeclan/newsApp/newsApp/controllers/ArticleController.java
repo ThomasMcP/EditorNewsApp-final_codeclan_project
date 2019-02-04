@@ -32,9 +32,14 @@ public class ArticleController {
         return  articleRepository.findArticleByJournalistId(journalist_id);
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/id/{id}")
     public List<Article> findArticleById(@PathVariable Long id){
         return articleRepository.findArticleById(id);
+    }
+
+    @GetMapping
+    public List<Article> findAllArticles(){
+        return articleRepository.findAll();
     }
 //        @GetMapping(value = "/date/{date}")
 //        public List<Article> getArticlesByDate(@PathVariable String date){
