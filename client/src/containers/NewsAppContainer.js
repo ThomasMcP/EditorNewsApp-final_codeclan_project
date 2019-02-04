@@ -10,6 +10,24 @@ class NewsAppContainer extends Component {
     this.state = {
       articles: MockData
     }
+    this.getArticlesData();
+  }
+
+  getArticlesData() {
+    //debugger;
+    window.fetch('http://localhost:8080/articles')
+    .then(function(response) {
+      console.dir(response);
+      return response.json();
+    })
+    .then(function(myJson) {
+    //  d//ebugger;
+      this.setState({articles: myJson});
+    })
+    .catch((err) => {
+    //  debugger;
+      console.log(err);
+    });
   }
 
   render(){
