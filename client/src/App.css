@@ -36,6 +36,14 @@ img {
   grid-area: txt;
 }
 
+.article-date,
+.article-style,
+.article-description {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.article-author,
 .article-description,
 .article-content {
   padding-bottom: 1rem;

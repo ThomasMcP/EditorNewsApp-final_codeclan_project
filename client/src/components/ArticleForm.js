@@ -58,7 +58,7 @@ class ArticleForm extends React.Component {
          <TextField
           id="outlined-with-placeholder"
           label="Author"
-          defaultValue = ""
+          defaultValue={this.state.article.author}
           placeholder="Enter Author"
           className={classes.textField}
           margin="normal"

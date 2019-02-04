@@ -45,6 +45,9 @@ class Article extends Component {
           <div className="article-date">
             {this.props.article.date}
           </div>
+          <div className="article-author">
+            {this.props.article.author}
+          </div>
           <div className="article-description">
           {this.props.article.description}
           </div>
