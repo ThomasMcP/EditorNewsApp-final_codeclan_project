@@ -1,7 +1,9 @@
 package com.codeclan.newsApp.newsApp.repositories.ArticleRepository;
 
 import com.codeclan.newsApp.newsApp.models.Article;
+import com.codeclan.newsApp.newsApp.projections.EmbedArticle;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
