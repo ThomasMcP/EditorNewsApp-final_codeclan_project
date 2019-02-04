@@ -110,6 +110,12 @@ class PrimarySearchAppBar extends React.Component {
     this.setState({ mobileMoreAnchorEl: null });
   };
 
+  handleNewArticle(){
+    console.log("In");
+    // https://stackoverflow.com/a/43230829/5158630
+    this.setState({redirectEdit:true});
+  }
+
   render() {
     const { anchorEl, mobileMoreAnchorEl } = this.state;
     const { classes } = this.props;
@@ -119,17 +125,27 @@ class PrimarySearchAppBar extends React.Component {
     const renderMenu = (
       <Menu
         anchorEl={anchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
+        transformOrigin={{ vertical: 'top', horizontal: 'left' }}
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
         <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
         <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
       </Menu>
+    );
 
-      // <MenuItem onClick={this.handleMenuClose}>Add New Article</MenuItem>
-      // <MenuItem onClick={this.handleMenuClose}>Add New Journalist</MenuItem>
+    const renderBurgerMenu = (
+      <Menu
+        anchorEl={anchorEl}
+        anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
+        transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+        open={isMenuOpen}
+        onClose={this.handleMenuClose}
+      >
+        <MenuItem onClick={() => this.handleNewArticle()}>Add New Article</MenuItem>
+        <MenuItem onClick={() => this.handleNewJournalist()}>Add New Journalist</MenuItem>
+      </Menu>
     );
 
     const renderMobileMenu = (
@@ -153,8 +169,12 @@ class PrimarySearchAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="fixed">
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-              <MenuIcon />
+            <IconButton
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="Open drawer"
+              onClick={this.handleProfileMenuOpen}>
+              <MenuIcon menu={renderBurgerMenu}/>
             </IconButton>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
               SGNN News App
@@ -189,7 +209,7 @@ class PrimarySearchAppBar extends React.Component {
             </div>
           </Toolbar>
         </AppBar>
-        {renderMenu}
+        {renderBurgerMenu}
         {renderMobileMenu}
       </div>
     );
