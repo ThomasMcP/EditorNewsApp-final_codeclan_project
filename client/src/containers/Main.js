@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import React, { Component, Fragment } from 'react';
 import NewsAppContainer from './NewsAppContainer';
 import ArticleForm from '../components/ArticleForm.js';
-import PropTypes from 'prop-types';
 import AuthorForm from '../components/AuthorForm.js'
 
 class Main extends Component {
@@ -21,6 +20,14 @@ class Main extends Component {
             path="/edit-author"
             // to pass props we need to render rather than use named component
             render={ props => <AuthorForm {...props} /> }
+          />
+          <Route
+            path="/create-article"
+            component = {ArticleForm}
+          />
+          <Route
+            path="/create-author"
+            component = {AuthorForm}
           />
         </Fragment>
       </Router>
