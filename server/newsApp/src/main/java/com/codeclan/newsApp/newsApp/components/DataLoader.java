@@ -27,12 +27,12 @@ public class DataLoader implements ApplicationRunner {
     }
     //    title; journalist; content;date; url;image_url;
     public void run(ApplicationArguments args){
-        Journalist david = new Journalist();
+        Journalist david = new Journalist("Steven");
         journalistRepository.save(david);
 
         Article article1 = new Article("Tendril Nostrils",
                 "The investigation into the Bog Monster",
-                "http:bbc.co.uk/feed/", "http:src.image_placeholder", new Date(),"", david );
+                "http:bbc.co.uk/feed/", "http:src.image_placeholder", new Date(),"description here", david );
         articleRepository.save(article1);
 
 
