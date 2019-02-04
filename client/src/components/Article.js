@@ -4,15 +4,6 @@ import { Redirect } from 'react-router'
 import ArticleForm from './ArticleForm';
 
 
-// const styles = theme => ({
-//   button: {
-//     margin: theme.spacing.unit,
-//   },
-//   input: {
-//     display: 'none',
-//   },
-// });
-
 class Article extends Component {
 
   constructor() {
