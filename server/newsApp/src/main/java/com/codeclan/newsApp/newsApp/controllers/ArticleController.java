@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping(value = "/articles")
+@RequestMapping(value = "/api/articles")
 public class ArticleController {
 
     @Autowired
