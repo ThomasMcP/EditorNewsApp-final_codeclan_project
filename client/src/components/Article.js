@@ -24,7 +24,13 @@ class Article extends Component {
     const { redirectEdit } = this.state;
     if (redirectEdit) {
       return(
-        <ArticleForm article={this.props.article} />
+        <Redirect
+          to={{
+            pathname: "/edit-article",
+            search: "",
+            article: this.state.article
+          }}
+        />
       )
     }
     return (
