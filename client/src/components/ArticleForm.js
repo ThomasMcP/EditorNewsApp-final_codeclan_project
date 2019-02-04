@@ -26,10 +26,27 @@ class ArticleForm extends React.Component {
 
   constructor(props){
     super(props);
-    //debugger;
     console.log("In article form constructor")
 
-    const article = this.props.location.state.article;
+    let article;
+
+    // if we pass without an articles prop,
+    // make an empty article. Otherwise use the one
+    // passed in the props.
+
+    if (this.props.location.state === undefined) {
+      article = {
+        name: "",
+        author: "",
+        title: "",
+        description: "",
+        content: "",
+        date: "",
+        imagelink: ""
+      }
+    } else {
+      article = this.props.location.state.article;
+    };
     console.dir(article);
 
     this.state = {
