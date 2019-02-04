@@ -31,7 +31,6 @@ public class DataLoader implements ApplicationRunner {
     public void run(ApplicationArguments args) {
         Journalist david = new Journalist("Steven");
         journalistRepository.save(david);
-
         GregorianCalendar date1 = new GregorianCalendar(2018, 10, 03);
         Article article1 = new Article("Tendril Nostrils",
                 "The investigation into the Bog Monster",

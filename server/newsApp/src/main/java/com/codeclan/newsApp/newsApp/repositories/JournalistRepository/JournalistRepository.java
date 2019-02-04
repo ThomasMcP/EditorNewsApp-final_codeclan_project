@@ -7,4 +7,7 @@ import java.util.List;
 
 public interface JournalistRepository extends JpaRepository<Journalist, Long>, JournalistRepositoryCustom {
     List<Journalist> findJournalistsByName(String name);
+
+    List<Journalist> findJournalistById(Long journalist_id);
 }
+
