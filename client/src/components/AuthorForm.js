@@ -46,20 +46,15 @@ class AuthorForm extends React.Component {
     return (
       <form className={classes.root} autoComplete="off">
         <FormControl className={classes.formControl}>
-
-        <TextField
-          id="outlined-with-placeholder"
-          label="Author"
-          defaultValue={this.state.article.author}
-          placeholder="Enter Author"
-          className={classes.textField}
-          margin="normal"
-          variant="outlined"
-         />
-
-
-
-
+          <TextField
+            id="outlined-with-placeholder"
+            label="Author"
+            defaultValue={this.state.article.author}
+            placeholder="Enter Author"
+            className={classes.textField}
+            margin="normal"
+            variant="outlined"
+           />
         </FormControl>
         <Button variant="contained" color="primary" className="button">
           Save
