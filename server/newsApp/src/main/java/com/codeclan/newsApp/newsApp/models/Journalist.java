@@ -1,6 +1,7 @@
 package com.codeclan.newsApp.newsApp.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -18,12 +19,11 @@ public class Journalist {
     @Column(name = "name")
     private String name;
 
-    @JsonIgnoreProperties("journalists")
+    @JsonIgnore
     @OneToMany(mappedBy = "journalist", fetch = FetchType.LAZY)
     private List<Article> articles;
 
-    public Journalist(Long id, String name, List<Article> articles) {
-        this.id = id;
+    public Journalist(String name) {
         this.name = name;
         this.articles = new ArrayList<>();
     }
@@ -37,6 +37,14 @@ public class Journalist {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void addArticle(Article article){
+        this.articles.add(article);
+    }
+
+    public int countArticles(){
+        return this.articles.size();
     }
 
     public String getName() {
