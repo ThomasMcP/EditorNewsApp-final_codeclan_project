@@ -80,13 +80,6 @@ public class NewsAppApplicationTests {
 		assertEquals("www.tech.com", article.getUrl());
 	}
 
-//	@Test
-//	public void articleHasDate(){
-//		Journalist journalist = new Journalist("Peter Parker");
-//		Date date = new Date(2019, 02, 02);
-//		Article article = new Article("Tech Talks", journalist, "Description about it", "www.tech.com", date, "Tech stuff", "image.link");
-//		assertEquals(date, article.getDate());
-//	}
 
 	@Test
 	public void articleHasContent(){
