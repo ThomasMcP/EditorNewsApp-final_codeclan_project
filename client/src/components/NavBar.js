@@ -170,7 +170,7 @@ class PrimarySearchAppBar extends React.Component {
         <AppBar position="fixed">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-              <MenuIcon />
+              <MenuIcon /> This is the Hamburger
             </IconButton>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
               SGNN News App
