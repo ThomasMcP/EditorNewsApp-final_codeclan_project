@@ -5,6 +5,7 @@ import com.codeclan.newsApp.newsApp.models.Article;
 import com.codeclan.newsApp.newsApp.models.Journalist;
 import com.codeclan.newsApp.newsApp.repositories.ArticleRepository.ArticleRepository;
 import com.codeclan.newsApp.newsApp.repositories.JournalistRepository.JournalistRepository;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Component;
 import java.io.*;
 import java.nio.file.Paths;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -45,12 +47,20 @@ public class DataLoader implements ApplicationRunner {
         InputStreamReader isr = new InputStreamReader(fis);
         BufferedReader br = new BufferedReader(isr);
 
+        ArrayList<String> lines = new ArrayList<String>();
         String line;
         while((line = br.readLine()) != null){
             //process the line
-            System.out.println(line);
+            lines.add(line);
         }
         br.close();
+        System.out.println(lines.get(0));
+
+        // parse
+        String jsonString = lines.get(0);
+        ObjectMapper objectMapper = new ObjectMapper();
+        Article[] article = objectMapper.readValue(jsonString, Article[].class);
+        System.out.println(article);
 
 //        Journalist steven = new Journalist("Steven");
 //        journalistRepository.save(steven);
