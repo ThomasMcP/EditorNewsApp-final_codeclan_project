@@ -41,7 +41,7 @@ public class NewsAppApplicationTests {
         GregorianCalendar date1 = new GregorianCalendar(2018, 10, 03);
 		Article article1 = new Article("Tendril Nostrils",
 				"The investigation into the Bog Monster",
-				"http:bbc.co.uk/feed/", "http:src.image_placeholder", date1,"description", journalist );
+				"http:bbc.co.uk/feed/", "http:src.image_placeholder", date1,"description", "Steven" );
 		articleRepository.save(article1);
 	}
 

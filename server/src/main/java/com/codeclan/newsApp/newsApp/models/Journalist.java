@@ -18,13 +18,13 @@ public class Journalist {
     @Column(name = "name")
     private String name;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "journalist", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Article> articles;
+//    @JsonIgnore
+//    @OneToMany(mappedBy = "journalist", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    private List<Article> articles;
 
     public Journalist(String name) {
         this.name = name;
-        this.articles = new ArrayList<>();
+//        this.articles = new ArrayList<>();
     }
 
     public Journalist() {
@@ -38,13 +38,13 @@ public class Journalist {
         this.id = id;
     }
 
-    public void addArticle(Article article){
-        this.articles.add(article);
-    }
-
-    public int countArticles(){
-        return this.articles.size();
-    }
+//    public void addArticle(Article article){
+//        this.articles.add(article);
+//    }
+//
+//    public int countArticles(){
+//        return this.articles.size();
+//    }
 
     public String getName() {
         return name;
@@ -54,11 +54,11 @@ public class Journalist {
         this.name = name;
     }
 
-    public List<Article> getArticles() {
-        return articles;
-    }
-
-    public void setArticles(List<Article> articles) {
-        this.articles = articles;
-    }
+//    public List<Article> getArticles() {
+//        return articles;
+//    }
+//
+//    public void setArticles(List<Article> articles) {
+//        this.articles = articles;
+//    }
 }
