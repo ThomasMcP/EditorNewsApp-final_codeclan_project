@@ -1,13 +1,10 @@
-package com.codeclan.newsApp.newsApp.repositories.ArticleRepository;
+package com.codeclan.newsApp.repositories.ArticleRepository;
 
-import com.codeclan.newsApp.newsApp.models.Article;
-import com.codeclan.newsApp.newsApp.projections.EmbedArticle;
-import com.codeclan.newsApp.newsApp.projections.EmbedJournalist;
+import com.codeclan.newsApp.models.Article;
+import com.codeclan.newsApp.projections.EmbedJournalist;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 
 @RepositoryRestResource(excerptProjection = EmbedJournalist.class)

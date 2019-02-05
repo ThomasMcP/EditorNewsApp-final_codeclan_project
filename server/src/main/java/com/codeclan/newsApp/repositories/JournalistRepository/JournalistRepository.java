@@ -1,7 +1,7 @@
-package com.codeclan.newsApp.newsApp.repositories.JournalistRepository;
+package com.codeclan.newsApp.repositories.JournalistRepository;
 
-import com.codeclan.newsApp.newsApp.models.Journalist;
-import com.codeclan.newsApp.newsApp.projections.EmbedArticle;
+import com.codeclan.newsApp.models.Journalist;
+import com.codeclan.newsApp.projections.EmbedArticle;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

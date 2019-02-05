@@ -1,15 +1,4 @@
-package com.codeclan.newsApp.newsApp.repositories.ArticleRepository;
-
-import com.codeclan.newsApp.newsApp.models.Article;
-import org.hibernate.Criteria;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.criterion.Restrictions;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
-
-import javax.persistence.EntityManager;
-import java.util.List;
+package com.codeclan.newsApp.repositories.ArticleRepository;
 
 public class ArticleRepositoryImpl {
 //

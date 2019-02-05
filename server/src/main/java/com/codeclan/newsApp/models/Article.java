@@ -1,8 +1,7 @@
 
-package com.codeclan.newsApp.newsApp.models;
+package com.codeclan.newsApp.models;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 @Entity
