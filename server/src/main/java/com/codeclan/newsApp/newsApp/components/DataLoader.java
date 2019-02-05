@@ -47,7 +47,7 @@ public class DataLoader implements ApplicationRunner {
         GregorianCalendar date4 = new GregorianCalendar(2019, 02, 3);
 
 
-        Article article1 = new Article("Tendril Nostrils", "The investigation into the Bog Monster", "http:bbc.co.uk/feed/", "http:src.image_placeholder", date1, "description here", david);
+        Article article1 = new Article("Tendril Nostrils", "The investigation into the Bog Monster", "http:bbc.co.uk/feed/", "http://www.thelistlove.com/wp-content/uploads/2015/07/Cat-Fail.gif", date1, "description here", david);
         articleRepository.save(article1);
 
         Article article2 = new Article("Tech News", "Tech content", "www.tech.com", "http://placekitten.com/200/300", date2, "tech description", chris);
@@ -56,10 +56,10 @@ public class DataLoader implements ApplicationRunner {
         Article article3 = new Article("Sports News", "Sports Content", "www.sports.com", "https://media.giphy.com/media/zs798Ib2ZrIAw/giphy.gif", date3, "sports description", steven);
         articleRepository.save(article3);
 
-        Article article4 = new Article("Science News", "Science Content", "www.science.com", "image.science.org", date4, "science description", tom);
+        Article article4 = new Article("Science News", "Science Content", "www.science.com", "https://i.ytimg.com/vi/MkTOXFVdUTE/maxresdefault.jpg", date4, "science description", tom);
         articleRepository.save(article4);
 
-        Article article5 = new Article("Business News", "Business Content", "www.Business.com", "image.Business.org", date3, "Business description", steven);
+        Article article5 = new Article("Business News", "Business Content", "www.Business.com", "https://media.giphy.com/media/TAyZakNT3N4c0/giphy.gif", date3, "Business description", steven);
         articleRepository.save(article5);
 
 
