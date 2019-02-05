@@ -1,9 +1,9 @@
-package com.codeclan.newsApp;
+package com.codeclan.newsApp.newsApp;
 
-import com.codeclan.newsApp.models.Article;
-import com.codeclan.newsApp.models.Journalist;
-import com.codeclan.newsApp.repositories.ArticleRepository.ArticleRepository;
-import com.codeclan.newsApp.repositories.JournalistRepository.JournalistRepository;
+import com.codeclan.newsApp.newsApp.models.Article;
+import com.codeclan.newsApp.newsApp.models.Journalist;
+import com.codeclan.newsApp.newsApp.repositories.ArticleRepository.ArticleRepository;
+import com.codeclan.newsApp.newsApp.repositories.JournalistRepository.JournalistRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

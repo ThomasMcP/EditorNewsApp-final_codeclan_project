@@ -1,4 +1,4 @@
-package com.codeclan.newsApp;
+package com.codeclan.newsApp.newsApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

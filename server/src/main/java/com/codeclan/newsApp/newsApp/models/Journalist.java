@@ -1,7 +1,8 @@
-package com.codeclan.newsApp.models;
+package com.codeclan.newsApp.newsApp.models;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class Journalist {
     @Column(name = "name")
     private String name;
 
-    @JsonIgnore
+//    @JsonIgnore
     @OneToMany(mappedBy = "journalist", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Article> articles;
 

@@ -1,10 +1,10 @@
-package com.codeclan.newsApp.components;
+package com.codeclan.newsApp.newsApp.components;
 
 
-import com.codeclan.newsApp.models.Article;
-import com.codeclan.newsApp.models.Journalist;
-import com.codeclan.newsApp.repositories.ArticleRepository.ArticleRepository;
-import com.codeclan.newsApp.repositories.JournalistRepository.JournalistRepository;
+import com.codeclan.newsApp.newsApp.models.Article;
+import com.codeclan.newsApp.newsApp.models.Journalist;
+import com.codeclan.newsApp.newsApp.repositories.ArticleRepository.ArticleRepository;
+import com.codeclan.newsApp.newsApp.repositories.JournalistRepository.JournalistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

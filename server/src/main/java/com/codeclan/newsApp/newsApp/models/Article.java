@@ -1,5 +1,7 @@
 
-package com.codeclan.newsApp.models;
+package com.codeclan.newsApp.newsApp.models;
+
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.GregorianCalendar;
@@ -29,12 +31,15 @@ public class Article {
 
     @Column(name= "description")
     private String description;
+
+//    @Column(name = "journalist")
+//    private Journalist journalist;
+
     @ManyToOne
-    @JoinColumn(name = "journalist_id", nullable = false)
+    @JoinColumn(name = "journalist_id")
     private Journalist journalist;
 
-    public Article(String title, String content,
-                   String url, String image_url , GregorianCalendar date, String description, Journalist journalist) {
+    public Article(String title, String content, String url, String image_url , GregorianCalendar date, String description, Journalist journalist) {
         this.title = title;
         this.content = content;
         this.url = url;
@@ -104,7 +109,6 @@ public class Article {
     public void setDescription(String description) {
         this.description = description;
     }
-
 
     public Journalist getJournalist() {
         return journalist;
