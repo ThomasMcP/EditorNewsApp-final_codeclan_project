@@ -12,5 +12,5 @@ public interface EmbedJournalist {
     String getUrl();
     String getImage_url();
     String getDescription();
-    Journalist getJournliast();
+    Journalist getJournalist();
 }
