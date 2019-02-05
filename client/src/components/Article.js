@@ -100,7 +100,12 @@ class Article extends Component {
           >
               Edit
           </Button>
-          <Button variant="contained" color="secondary" className="button">
+          <Button
+            variant="contained"
+            color="secondary"
+            className="button"
+            onClick={() => this.props.handleDelete(this.props.article)}
+          >
               Delete
           </Button>
           </div>

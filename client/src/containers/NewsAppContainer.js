@@ -16,6 +16,12 @@ class NewsAppContainer extends Component {
 
   }
 
+  handleArticleDelete(article){
+    console.log(article);
+  }
+
+
+
   getArticlesData() {
     //debugger;
     window.fetch('http://localhost:8080/articles')
@@ -36,7 +42,7 @@ class NewsAppContainer extends Component {
     return (
       <>
       <NavBar />
-      <ArticleList articles={this.state.articles} />
+      <ArticleList articles={this.state.articles} handleDelete={this.handleArticleDelete} />
       </>
     )
   }
