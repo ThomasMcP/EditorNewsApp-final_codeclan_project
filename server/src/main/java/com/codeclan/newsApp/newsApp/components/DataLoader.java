@@ -56,10 +56,10 @@ public class DataLoader implements ApplicationRunner {
         Article article3 = new Article("Sports News", "Sports Content", "www.sports.com", "https://media.giphy.com/media/zs798Ib2ZrIAw/giphy.gif", date3, "sports description", steven);
         articleRepository.save(article3);
 
-        Article article4 = new Article("Science News", "Science Content", "www.science.com", "image.science.org", date4, "science description", tom);
+        Article article4 = new Article("Science News", "Science Content", "www.science.com", "https://i.ytimg.com/vi/MkTOXFVdUTE/maxresdefault.jpg", date4, "science description", tom);
         articleRepository.save(article4);
 
-        Article article5 = new Article("Business News", "Business Content", "www.Business.com", "image.Business.org", date3, "Business description", steven);
+        Article article5 = new Article("Business News", "Business Content", "www.Business.com", "http://www.parc-montozarbres.com/wp-content/uploads/2017/04/dfghjhgfds.jpg", date3, "Business description", steven);
         articleRepository.save(article5);
 
 
