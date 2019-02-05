@@ -6,6 +6,16 @@
 //
 //@Projection(name="embedArticle", types = Journalist.class)
 //public interface EmbedArticle {
-//    String getName();
+//    String getName(); //journalist
 //    Article getArticle();
 //}
+//
+//// EmbedShip.java SHip == Artticle, Journaliust == pirate
+//
+////@Projection(name = "embedShip", types = Pirate.class)
+////public interface EmbedShip {
+////    String getFirstName();
+////    String getLastName();
+////    int getAge();
+////    Ship getShip();
+////}
