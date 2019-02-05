@@ -30,15 +30,15 @@ public class Article {
     @Column(name= "description")
     private String description;
 
-    @Column(name = "author")
-    private String author;
+//    @Column(name = "author")
+//    private Journalist author;
 
-//    @ManyToOne
-//    @JoinColumn(name = "journalist_id", nullable = false)
-//    private Journalist journalist;
+    @ManyToOne
+    @JoinColumn(name = "journalist_id", nullable = false)
+    private Journalist author;
 
     public Article(String title, String content,
-                   String url, String image_url , GregorianCalendar date, String description, String author) {
+                   String url, String image_url , GregorianCalendar date, String description, Journalist author) {
         this.title = title;
         this.content = content;
         this.url = url;
@@ -110,11 +110,11 @@ public class Article {
     }
 
 
-    public String getAuthor() {
+    public Journalist getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Journalist author) {
         this.author = author;
     }
 }
