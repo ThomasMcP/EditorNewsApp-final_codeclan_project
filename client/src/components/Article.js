@@ -5,9 +5,6 @@ import ArticleForm from './ArticleForm';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import IconButton from '@material-ui/core/IconButton';
 
-
-
-
 class Article extends Component {
 
   constructor() {
@@ -88,7 +85,9 @@ class Article extends Component {
           </div>
         </div>
         <div className="article-image">
-          <img alt="{this.props.article.title}" src={this.props.article.imagelink} />
+          <img
+            alt="{this.props.article.title}"
+            src={this.props.article.image_url} />
         </div>
         <div className="article-footer">
           <div className="buttons">
