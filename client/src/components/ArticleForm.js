@@ -133,13 +133,17 @@ class ArticleForm extends React.Component {
         id="outlined-with-placeholder"
         label="ImageLink"
         placeholder="Enter ImageLink"
-        defaultValue={this.state.article.imagelink}
+        defaultValue={this.state.article.image_url}
         className={classes.textField}
         margin="normal"
         variant="outlined"
        />
         </FormControl>
-        <Button variant="contained" color="primary" className="button">
+        <Button
+          variant="contained"
+          color="primary"
+          className="button"
+        >
           Save
         </Button>
         <Button
