@@ -53,7 +53,7 @@ public class DataLoader implements ApplicationRunner {
         Article article2 = new Article("Tech News", "Tech content", "www.tech.com", "http://placekitten.com/200/300", date2, "tech description", chris);
         articleRepository.save(article2);
 
-        Article article3 = new Article("Sports News", "Sports Content", "www.sports.com", "image.sports.org", date3, "sports description", steven);
+        Article article3 = new Article("Sports News", "Sports Content", "www.sports.com", "https://media.giphy.com/media/zs798Ib2ZrIAw/giphy.gif", date3, "sports description", steven);
         articleRepository.save(article3);
 
         Article article4 = new Article("Science News", "Science Content", "www.science.com", "image.science.org", date4, "science description", tom);
