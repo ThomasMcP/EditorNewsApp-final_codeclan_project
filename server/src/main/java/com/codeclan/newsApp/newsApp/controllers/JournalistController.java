@@ -26,8 +26,8 @@ public class JournalistController {
         return journalistRepository.findJournalistById(id);
     }
 
-//    @GetMapping
-//    public List<Journalist> getAllJournalists(){
-//        return journalistRepository.findAll();
-//    }
+    @GetMapping
+    public List<Journalist> getAllJournalists(){
+        return journalistRepository.findAll();
+    }
 }
