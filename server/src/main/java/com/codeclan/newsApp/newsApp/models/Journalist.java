@@ -19,7 +19,7 @@ public class Journalist {
     @Column(name = "name")
     private String name;
 
-//    @JsonIgnore
+    @JsonIgnore
     @OneToMany(mappedBy = "journalist", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Article> articles;
 

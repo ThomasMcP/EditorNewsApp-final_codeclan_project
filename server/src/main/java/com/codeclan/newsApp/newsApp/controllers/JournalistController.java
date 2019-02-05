@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/api/journalists")
+@RequestMapping(value = "/journalists")
 public class JournalistController {
 
     @Autowired
@@ -26,8 +26,8 @@ public class JournalistController {
 //        return journalistRepository.findJournalistById(id);
 //    }
 //
-//    @GetMapping
-//    public List<Journalist> getAllJournalists(){
-//        return journalistRepository.findAll();
-//    }
+    @GetMapping
+    public List<Journalist> getAllJournalists(){
+        return journalistRepository.findAll();
+    }
 }
