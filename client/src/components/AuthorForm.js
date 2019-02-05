@@ -30,42 +30,17 @@ class AuthorForm extends React.Component {
     //debugger;
     console.log("In article form constructor")
 
-    let article;
-    let author;
-    if (this.props.location.state === undefined) {
-      // if no article provided then make placeholder
-      // article and author
-      article = {
-        name: "",
-        author: "",
-        description: "",
-        imagelink: "",
-        content: "",
-        date: ""
-      };
-      author = {
-        name: ""
-      }
-    }
-    else {
-      // if one sent in props, use it.
-      article = this.props.location.state.article;
-      author = {
-        name: article.author
-      }
-    }
-
+    const article = this.props.location.state.article;
     console.dir(article);
-    console.dir(author);
 
     this.state = {
       article: article,
-      author: author,
       redirectAuthorFormEdit: false
     };
   }
 
   handleChange = event => {
+    console.log(event.target.article);
     this.setState({ [event.target.name]: event.target.value });
   };
 
@@ -100,6 +75,7 @@ class AuthorForm extends React.Component {
             className={classes.textField}
             margin="normal"
             variant="outlined"
+            onChange={this.handleChange}
            />
         </FormControl>
         <Button variant="contained" color="primary" className="button">
