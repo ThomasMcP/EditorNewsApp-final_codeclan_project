@@ -1,5 +1,5 @@
 
-package com.codeclan.newsApp.models;
+package com.codeclan.newsApp.newsApp.models;
 
 import javax.persistence.*;
 import java.util.GregorianCalendar;

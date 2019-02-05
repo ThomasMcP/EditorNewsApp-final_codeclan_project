@@ -1,4 +1,4 @@
-package com.codeclan.newsApp.models;
+package com.codeclan.newsApp.newsApp.models;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

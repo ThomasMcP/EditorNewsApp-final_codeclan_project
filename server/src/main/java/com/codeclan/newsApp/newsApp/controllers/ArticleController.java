@@ -1,8 +1,8 @@
-package com.codeclan.newsApp.controllers;
+package com.codeclan.newsApp.newsApp.controllers;
 
-import com.codeclan.newsApp.models.Article;
-import com.codeclan.newsApp.repositories.ArticleRepository.ArticleRepository;
-import com.codeclan.newsApp.repositories.JournalistRepository.JournalistRepository;
+import com.codeclan.newsApp.newsApp.models.Article;
+import com.codeclan.newsApp.newsApp.repositories.ArticleRepository.ArticleRepository;
+import com.codeclan.newsApp.newsApp.repositories.JournalistRepository.JournalistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

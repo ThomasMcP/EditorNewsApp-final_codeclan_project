@@ -1,7 +1,7 @@
-package com.codeclan.newsApp.projections;
+package com.codeclan.newsApp.newsApp.projections;
 
-        import com.codeclan.newsApp.models.Article;
-        import com.codeclan.newsApp.models.Journalist;
+        import com.codeclan.newsApp.newsApp.models.Article;
+        import com.codeclan.newsApp.newsApp.models.Journalist;
         import org.springframework.data.rest.core.config.Projection;
 
 @Projection(name="embedArticle", types = Journalist.class)
