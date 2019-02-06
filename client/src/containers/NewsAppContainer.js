@@ -8,7 +8,7 @@ class NewsAppContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
-      articles: MockData
+      articles: []
     }
 
     this.getArticlesData = this.getArticlesData.bind(this);
