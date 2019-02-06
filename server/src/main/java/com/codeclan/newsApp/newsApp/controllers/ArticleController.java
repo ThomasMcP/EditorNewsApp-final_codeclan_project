@@ -32,11 +32,15 @@ public class ArticleController {
 //    public List<Article> findArticleById(@PathVariable Long id){
 //        return articleRepository.findArticleById(id);
 //    }
+
+
     @CrossOrigin(origins="http://localhost:3000")
     @GetMapping
     public List<Article> findAllArticles(){
         return articleRepository.findAll();
     }
+
+
 //        @GetMapping(value = "/date/{date}")
 //        public List<Article> getArticlesByDate(@PathVariable String date){
 //            return articleRepository.getArticlesByDate(date);
