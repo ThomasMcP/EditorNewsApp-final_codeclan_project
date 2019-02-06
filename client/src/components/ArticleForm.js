@@ -34,6 +34,8 @@ class ArticleForm extends React.Component {
     // make an empty article. Otherwise use the one
     // passed in the props.
 
+    let formMode;
+
     if (this.props.location.state === undefined) {
       article = {
         name: "",
@@ -44,7 +46,9 @@ class ArticleForm extends React.Component {
         date: "",
         imagelink: ""
       }
+      formMode = "POST";
     } else {
+      formMode = "PUT";
       article = this.props.location.state.article;
     };
     console.dir(article);
@@ -52,7 +56,8 @@ class ArticleForm extends React.Component {
     this.state = {
       article: article,
       redirectClose: false,
-      changeForm: false
+      changeForm: false,
+      formMode: formMode
     };
     this.handleChangeText = this.handleChangeText.bind(this);
 
@@ -71,7 +76,7 @@ class ArticleForm extends React.Component {
   handleSubmit(){
     this.setState({changeForm:true});
     console.log("submit pressed");
-    debugger
+    alert(this.state.formMode);
   }
 
   handleChangeText(event){
