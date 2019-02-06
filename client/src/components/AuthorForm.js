@@ -102,7 +102,7 @@ class AuthorForm extends React.Component {
             variant="outlined"
            />
         </FormControl>
-        <Button variant="contained" color="primary" className="button">
+        <Button variant="contained" color="#009688" className="button">
           Save
         </Button>
         <Button
