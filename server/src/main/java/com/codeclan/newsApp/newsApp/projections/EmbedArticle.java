@@ -9,7 +9,7 @@
 //    String getName(); //journalist
 //    Article getArticle();
 //}
-//
+
 //// EmbedShip.java SHip == Artticle, Journaliust == pirate
 //
 ////@Projection(name = "embedShip", types = Pirate.class)
