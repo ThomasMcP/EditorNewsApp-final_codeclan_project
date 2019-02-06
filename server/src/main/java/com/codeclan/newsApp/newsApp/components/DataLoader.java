@@ -10,6 +10,8 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.GregorianCalendar;
 
 @Component
@@ -46,7 +48,13 @@ public class DataLoader implements ApplicationRunner {
         GregorianCalendar date3 = new GregorianCalendar(2005, 8, 13);
         GregorianCalendar date4 = new GregorianCalendar(2019, 02, 3);
 
-
+        ArrayList <GregorianCalendar> date = new ArrayList <>();
+        date.add(date1);
+        date.add(date2);
+        date.add(date3);
+        date.add(date4);
+        Collections.sort(date);
+        ;
         Article article1 = new Article("Tendril Nostrils", "The investigation into the Bog Monster", "http:bbc.co.uk/feed/", "http://www.thelistlove.com/wp-content/uploads/2015/07/Cat-Fail.gif", date1, "description here", david);
         articleRepository.save(article1);
 
