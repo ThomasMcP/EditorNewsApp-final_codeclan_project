@@ -18,9 +18,10 @@ class NewsAppContainer extends Component {
 
   getArticlesData() {
     //debugger;
-    window.fetch('http://localhost:8080/articles')
+    window.fetch('http://localhost:3001/')
     .then( response => {
-      //console.dir(response.json());
+      console.dir(response);
+      // debugger;
       return response.json();
     })
     .then( myJson => {

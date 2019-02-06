@@ -10,16 +10,24 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get("/", (req,res) => {
-  fetch('http://localhost:8080/api/articles', {
-     method: "POST",
-     body: JSON.stringify("{}")
+app.get("/", (req,res, next) => {
+  console.log("In proxy")
+  return fetch('http://localhost:8080/api/articles', {
+     method: "GET",
+     headers: {
+       "Content-Type": "application/json"
+     }
   })
-  .then((res) => {
-    return res.json()
+  .then((result) => {
+    console.log(result);
+    return result.json()
   })
   .then((data) => {
     console.log(data)
+    res.send(JSON.stringify(data._embedded.articles))
+  })
+  .catch((err) => {
+    console.log(err);
   })
 })
 

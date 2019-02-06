@@ -82,9 +82,9 @@ class ArticleForm extends React.Component {
     // http://localhost:8080/api/articles
     let handler;
     if (this.state.formMode === "POST"){
-      handler = PostData("http://localhost:8080/api/articles", this.state.article)
+      handler = PostData("http://localhost:3001/api/articles", this.state.article)
     } else {
-      handler = PutData(`http://localhost:8080/api/articles/${this.state.article.id}`, this.state.article)
+      handler = PutData(`http://localhost:3001/api/articles/${this.state.article.id}`, this.state.article)
     }
 
     handler
