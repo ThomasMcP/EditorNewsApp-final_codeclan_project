@@ -18,17 +18,19 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-
 const styles = theme => ({
   root: {
     width: '100%',
+    color: 'red',
   },
   grow: {
     flexGrow: 1,
+    color: 'green'
   },
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
+    color: 'red'
   },
   title: {
     display: 'none',
@@ -156,7 +158,7 @@ class PrimarySearchAppBar extends React.Component {
         </MenuItem>
         <MenuItem>
           <IconButton color="inherit">
-            <Badge badgeContent={11} color="secondary">
+            <Badge badgeContent={11} color="red">
               <NotificationsIcon />
             </Badge>
           </IconButton>
@@ -184,7 +186,7 @@ class PrimarySearchAppBar extends React.Component {
               aria-owns={isMenuOpen ? 'material-appbar' : undefined}
               aria-haspopup="true"
               onClick={this.handleProfileMenuOpen}
-              color="inherit"
+
               >
               <MenuIcon />
             </IconButton>
