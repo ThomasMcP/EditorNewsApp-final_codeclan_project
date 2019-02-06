@@ -5,7 +5,9 @@ import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
 //import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
-import { Redirect } from 'react-router'
+import { Redirect } from 'react-router';
+import PostData from './PostData.js';
+import PutData from './PutData.js';
 
 
 const styles = theme => ({
@@ -75,8 +77,23 @@ class ArticleForm extends React.Component {
 
   handleSubmit(){
     this.setState({changeForm:true});
-    console.log("submit pressed");
-    alert(this.state.formMode);
+    //console.log("submit pressed");
+    // alert(this.state.formMode);
+    // http://localhost:8080/api/articles
+    let handler;
+    if (this.state.formMode === "POST"){
+      handler = PostData("http://localhost:8080/api/articles", this.state.article)
+    } else {
+      handler = PutData(`http://localhost:8080/api/articles/${this.state.article.id}`, this.state.article)
+    }
+
+    handler
+    .then((result) => {
+      alert(`Done a ${this.state.formMode}`);
+    })
+    .catch((err) => {
+      debugger
+    })
   }
 
   handleChangeText(event){
