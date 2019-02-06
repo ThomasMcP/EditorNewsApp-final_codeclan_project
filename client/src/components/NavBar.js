@@ -16,6 +16,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 
 const styles = theme => ({
   root: {
@@ -124,10 +126,14 @@ class PrimarySearchAppBar extends React.Component {
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
-        <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
+
+        <Link to="/create-article">
         <MenuItem onClick={this.handleMenuClose}>Add New Article</MenuItem>
+        </Link>
+
+        <Link to="/create-author">
         <MenuItem onClick={this.handleMenuClose}>Add New Journalist</MenuItem>
+        </Link>
 
       </Menu>
     );
@@ -169,11 +175,27 @@ class PrimarySearchAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="fixed">
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-              <MenuIcon /> 
+
+
+            <IconButton
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="Open drawer"
+              aria-owns={isMenuOpen ? 'material-appbar' : undefined}
+              aria-haspopup="true"
+              onClick={this.handleProfileMenuOpen}
+              color="inherit"
+              >
+              <MenuIcon />
             </IconButton>
-            <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-              SGNN News App
+
+            <Typography
+              className={classes.title}
+              variant="h6"
+              color="inherit"
+              noWrap
+              >
+              Cat News Today
             </Typography>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -187,40 +209,42 @@ class PrimarySearchAppBar extends React.Component {
                 }}
               />
             </div>
-            <div className={classes.grow} />
-            <div className={classes.sectionDesktop}>
-              <IconButton color="inherit">
-                <Badge badgeContent={null} color="secondary">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
-              <IconButton color="inherit">
-                <Badge badgeContent={null} color="secondary">
-                  <NotificationsIcon />
-                </Badge>
-              </IconButton>
-              <IconButton
-                aria-owns={isMenuOpen ? 'material-appbar' : undefined}
-                aria-haspopup="true"
-                onClick={this.handleProfileMenuOpen}
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton>
-            </div>
-            <div className={classes.sectionMobile}>
-              <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
-                <MoreIcon />
-              </IconButton>
-            </div>
-          </Toolbar>
-        </AppBar>
-        {renderMenu}
-        {renderMobileMenu}
-      </div>
-    );
-  }
-}
+            </Toolbar>
+            </AppBar>
+            {renderMenu}
+            {renderMobileMenu}
+          </div>
+        );
+      }
+    }
+            // <div className={classes.grow} />
+            // <div className={classes.sectionDesktop}>
+            //   <IconButton color="inherit">
+            //     <Badge badgeContent={null} color="secondary">
+            //       <MailIcon />
+            //     </Badge>
+            //   </IconButton>
+            //   <IconButton color="inherit">
+            //     <Badge badgeContent={null} color="secondary">
+            //       <NotificationsIcon />
+            //     </Badge>
+            //   </IconButton>
+            //   <IconButton
+            //     aria-owns={isMenuOpen ? 'material-appbar' : undefined}
+            //     aria-haspopup="true"
+            //     onClick={this.handleProfileMenuOpen}
+            //     color="inherit"
+            //   >
+            //   hello
+            //     <AccountCircle />
+            //   </IconButton>
+            // </div>
+            // <div className={classes.sectionMobile}>
+            //   <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
+            //     <MoreIcon />
+            //   </IconButton>
+            // </div>
+
 
 PrimarySearchAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
