@@ -8,11 +8,13 @@ html {
   font-family: 'Merriweather', serif;
   font-size: 16px;
   background-color: white;
+    background-color: #009974;
 }
 
 form {
   max-width: 80%;
   margin: 0 auto;
+
 }
 
 .article-list {
@@ -34,6 +36,7 @@ img {
 
 .article-body {
   grid-area: txt;
+
 }
 
 .article-date,
@@ -67,6 +70,7 @@ img {
   font-size: 1.2rem;
   font-weight: bold;
   padding-bottom: 1rem;
+
 }
 
 .article-date {
@@ -101,6 +105,8 @@ button {
   padding: .5rem;
   border-radius: .5rem;
   margin: 1rem;
+
+
 }
 
 .button {
