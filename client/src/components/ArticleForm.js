@@ -77,23 +77,32 @@ class ArticleForm extends React.Component {
 
   handleSubmit(){
     this.setState({changeForm:true});
-    //console.log("submit pressed");
+    console.log("submit pressed");
     // alert(this.state.formMode);
     // http://localhost:8080/api/articles
+    console.log(this.state.article);
     let handler;
     if (this.state.formMode === "POST"){
       handler = PostData("http://localhost:3001/api/articles", this.state.article)
     } else {
-      handler = PutData(`http://localhost:3001/api/articles/${this.state.article.id}`, this.state.article)
+      PutData(`http://localhost:3001/api/articles/${this.state.article.id}`, this.state.article)
+      .then((result) => {
+        alert(`Done a ${this.state.formMode}`);
+      })
+      .catch((err) => {
+        debugger
+      })
     }
 
-    handler
-    .then((result) => {
-      alert(`Done a ${this.state.formMode}`);
-    })
-    .catch((err) => {
-      debugger
-    })
+    // handler
+    // .then((result) => {
+    //   alert(`Done a ${this.state.formMode}`);
+    // })
+    // .catch((err) => {
+    //   debugger
+    // })
+
+
   }
 
   handleChangeText(event){
