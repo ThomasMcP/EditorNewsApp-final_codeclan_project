@@ -14,26 +14,23 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "title")
+    @Column(name = "title", length = 2048)
     private String title;
 
-    @Column(name = "image_url")
+    @Column(name = "image_url", length = 2048)
     private String image_url;
 
-    @Column(name = "content")
+    @Column(name = "content", length = 2048)
     private String content;
 
-    @Column(name = "url")
+    @Column(name = "url", length = 2048)
     private String url;
 
     @Column(name = "date ")
     private GregorianCalendar date;
 
-    @Column(name= "description")
+    @Column(name= "description", length = 2048)
     private String description;
-
-//    @Column(name = "journalist")
-//    private Journalist journalist;
 
     @ManyToOne
     @JoinColumn(name = "journalist_id")
