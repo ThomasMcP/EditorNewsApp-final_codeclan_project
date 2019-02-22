@@ -1,4 +1,4 @@
-## News App-Full Stack Project Bried
+## News App-Full Stack Project Brief
 
 You have been tasked with building a web application to allow  a local news company to upload the latest Scottish news.
 
