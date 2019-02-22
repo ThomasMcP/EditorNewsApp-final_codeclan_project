@@ -25,6 +25,8 @@ and the full story along with the journalist who wrote it - and any other fields
   and navigation to go to the next and previous page
   
   ### TO RUN APP LOCALLY...
+  Application still in development, pull from develop branch
+  
   - npm init (in client directory)
   - npm run build (in client directory)
   - npm start (in client directory)
