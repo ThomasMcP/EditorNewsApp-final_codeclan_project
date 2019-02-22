@@ -1,4 +1,4 @@
-## News App-Full Stack Project
+## News App-Full Stack Project Bried
 
 You have been tasked with building a web application to allow  a local news company to upload the latest Scottish news.
 
@@ -24,7 +24,12 @@ and the full story along with the journalist who wrote it - and any other fields
 - Paginate your article list - display a certain number of articles per page, with a page number,
   and navigation to go to the next and previous page
   
-  ### INITIAL CONFIG
+  ### TO RUN APP LOCALLY...
   - npm init (in client directory)
   - npm run build (in client directory)
   - npm start (in client directory)
+  
+  - open server folder in IDE (We used IntelliJ)
+  - run server
+  
+  - open localhost:3000
